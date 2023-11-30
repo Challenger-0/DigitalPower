@@ -1,9 +1,7 @@
 #include "Size.hpp"
 
 namespace Graphics {
-Size::Size(std::uint16_t width, std::uint16_t height)
-    : width(width), height(height) {
-}
+
 
 std::size_t Size::getArea(void) const {
     return width * height;

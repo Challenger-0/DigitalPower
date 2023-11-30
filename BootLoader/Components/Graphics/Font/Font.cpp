@@ -22,9 +22,7 @@ const FontCharacter *FontCharacterSet::find(std::uint32_t target) const {
     } while (start <= end);
     return nullptr;
 }
-FontCharacter::FontCharacter(std::uint32_t charater, const Resource &res, Size size, Offset offset)
-    : Bitmap(res, size), offset(offset), charater(charater) {
-}
+
 Font::Font(const FontCharacter *characters, std::size_t countOfCharacters)
     : characterSet(characters, countOfCharacters) {
 }

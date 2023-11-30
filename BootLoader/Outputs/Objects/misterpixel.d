@@ -1,6 +1,8 @@
 ./outputs/objects/misterpixel.o: Resource\Fonts\MisterPixel.cpp \
   Resource\Fonts\MisterPixel.hpp Components\Graphics\Font\Font.hpp \
-  Components\Graphics\Basic\Bitmap.hpp Resource\Resource.hpp \
+  Components\Graphics\Basic\Bitmap.hpp \
+  Components\Graphics\Basic\Offset.hpp \
+  Components\Graphics\Basic\Size.hpp \
   C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\libcxx\cstddef \
   C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\libcxx\__assert \
   C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\libcxx\__config \
@@ -15,12 +17,11 @@
   C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\libcxx\version \
   C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\libcxx\stddef.h \
   C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\stddef.h \
-  Components\Graphics\Basic\Size.hpp \
   C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\libcxx\cstdint \
   C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\libcxx\stdint.h \
   C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdint.h \
-  Components\Graphics\Basic\Offset.hpp \
   C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\libcxx\cstdlib \
   C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\libcxx\stdlib.h \
   C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdlib.h \
-  Components\Graphics\Basic\Offset.ipp Resource\LocalResource.hpp
+  Components\Graphics\Basic\Offset.ipp Resource\Resource.hpp \
+  Resource\LocalResource.hpp

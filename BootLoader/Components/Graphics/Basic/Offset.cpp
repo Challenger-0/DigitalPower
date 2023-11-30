@@ -1,9 +1,6 @@
 #include "Offset.hpp"
 
 namespace Graphics {
-Offset::Offset(std::int16_t x, std::uint16_t y)
-    : x(x), y(y) {
-}
 
 Offset Offset::operator+(const Offset offset) const {
     return Offset(this->x + offset.x, this->y + offset.y);

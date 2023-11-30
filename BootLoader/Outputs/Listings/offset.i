@@ -8,8 +8,11 @@
 # 1 "Components/Graphics/Basic/Offset.hpp" 1
 
 
-# 1 "C:\\Keil_v5\\ARM\\ARMCLANG\\Bin\\..\\include\\libcxx\\cstdint" 1 3
-# 143 "C:\\Keil_v5\\ARM\\ARMCLANG\\Bin\\..\\include\\libcxx\\cstdint" 3
+# 1 "Components/Graphics/Basic/Size.hpp" 1
+
+
+# 1 "C:\\Keil_v5\\ARM\\ARMCLANG\\Bin\\..\\include\\libcxx\\cstddef" 1 3
+# 36 "C:\\Keil_v5\\ARM\\ARMCLANG\\Bin\\..\\include\\libcxx\\cstddef" 3
 # 1 "C:\\Keil_v5\\ARM\\ARMCLANG\\Bin\\..\\include\\libcxx\\__assert" 1 3
 # 13 "C:\\Keil_v5\\ARM\\ARMCLANG\\Bin\\..\\include\\libcxx\\__assert" 3
 # 1 "C:\\Keil_v5\\ARM\\ARMCLANG\\Bin\\..\\include\\libcxx\\__config" 1 3
@@ -32,9 +35,221 @@ void __libcpp_verbose_abort(const char *__format, ...);
 }}
 # 15 "C:\\Keil_v5\\ARM\\ARMCLANG\\Bin\\..\\include\\libcxx\\__assert" 2 3
 # 18 "C:\\Keil_v5\\ARM\\ARMCLANG\\Bin\\..\\include\\libcxx\\__assert" 3
-# 144 "C:\\Keil_v5\\ARM\\ARMCLANG\\Bin\\..\\include\\libcxx\\cstdint" 2 3
+# 37 "C:\\Keil_v5\\ARM\\ARMCLANG\\Bin\\..\\include\\libcxx\\cstddef" 2 3
+
+# 1 "C:\\Keil_v5\\ARM\\ARMCLANG\\Bin\\..\\include\\libcxx\\__type_traits/enable_if.h" 1 3
+# 16 "C:\\Keil_v5\\ARM\\ARMCLANG\\Bin\\..\\include\\libcxx\\__type_traits/enable_if.h" 3
 
 
+namespace std { inline namespace __2 {
+
+template <bool, class _Tp = void> struct __attribute__((__type_visibility__("default"))) enable_if {};
+template <class _Tp> struct __attribute__((__type_visibility__("default"))) enable_if<true, _Tp> {typedef _Tp type;};
+
+template <bool _Bp, class _Tp = void> using __enable_if_t __attribute__((__nodebug__)) = typename enable_if<_Bp, _Tp>::type;
+
+
+
+
+
+}}
+# 39 "C:\\Keil_v5\\ARM\\ARMCLANG\\Bin\\..\\include\\libcxx\\cstddef" 2 3
+# 1 "C:\\Keil_v5\\ARM\\ARMCLANG\\Bin\\..\\include\\libcxx\\__type_traits/integral_constant.h" 1 3
+# 16 "C:\\Keil_v5\\ARM\\ARMCLANG\\Bin\\..\\include\\libcxx\\__type_traits/integral_constant.h" 3
+
+
+namespace std { inline namespace __2 {
+
+template <class _Tp, _Tp __v>
+struct __attribute__((__type_visibility__("default"))) integral_constant
+{
+  static constexpr const _Tp value = __v;
+  typedef _Tp value_type;
+  typedef integral_constant type;
+  __attribute__((__visibility__("hidden"))) __attribute__((__exclude_from_explicit_instantiation__)) __attribute__((__abi_tag__("v16000")))
+  constexpr operator value_type() const noexcept {return value;}
+
+
+
+
+};
+
+template <class _Tp, _Tp __v>
+constexpr const _Tp integral_constant<_Tp, __v>::value;
+
+typedef integral_constant<bool, true> true_type;
+typedef integral_constant<bool, false> false_type;
+
+template <bool _Val>
+using _BoolConstant __attribute__((__nodebug__)) = integral_constant<bool, _Val>;
+
+
+
+
+
+
+}}
+# 40 "C:\\Keil_v5\\ARM\\ARMCLANG\\Bin\\..\\include\\libcxx\\cstddef" 2 3
+# 1 "C:\\Keil_v5\\ARM\\ARMCLANG\\Bin\\..\\include\\libcxx\\__type_traits/is_integral.h" 1 3
+# 14 "C:\\Keil_v5\\ARM\\ARMCLANG\\Bin\\..\\include\\libcxx\\__type_traits/is_integral.h" 3
+# 1 "C:\\Keil_v5\\ARM\\ARMCLANG\\Bin\\..\\include\\libcxx\\__type_traits/remove_cv.h" 1 3
+# 13 "C:\\Keil_v5\\ARM\\ARMCLANG\\Bin\\..\\include\\libcxx\\__type_traits/remove_cv.h" 3
+# 1 "C:\\Keil_v5\\ARM\\ARMCLANG\\Bin\\..\\include\\libcxx\\__type_traits/remove_const.h" 1 3
+# 16 "C:\\Keil_v5\\ARM\\ARMCLANG\\Bin\\..\\include\\libcxx\\__type_traits/remove_const.h" 3
+
+
+namespace std { inline namespace __2 {
+
+
+template <class _Tp>
+struct remove_const {
+  using type __attribute__((__nodebug__)) = __remove_const(_Tp);
+};
+
+template <class _Tp>
+using __remove_const_t = __remove_const(_Tp);
+# 40 "C:\\Keil_v5\\ARM\\ARMCLANG\\Bin\\..\\include\\libcxx\\__type_traits/remove_const.h" 3
+}}
+# 14 "C:\\Keil_v5\\ARM\\ARMCLANG\\Bin\\..\\include\\libcxx\\__type_traits/remove_cv.h" 2 3
+# 1 "C:\\Keil_v5\\ARM\\ARMCLANG\\Bin\\..\\include\\libcxx\\__type_traits/remove_volatile.h" 1 3
+# 16 "C:\\Keil_v5\\ARM\\ARMCLANG\\Bin\\..\\include\\libcxx\\__type_traits/remove_volatile.h" 3
+
+
+namespace std { inline namespace __2 {
+
+
+template <class _Tp>
+struct remove_volatile {
+  using type __attribute__((__nodebug__)) = __remove_volatile(_Tp);
+};
+
+template <class _Tp>
+using __remove_volatile_t = __remove_volatile(_Tp);
+# 40 "C:\\Keil_v5\\ARM\\ARMCLANG\\Bin\\..\\include\\libcxx\\__type_traits/remove_volatile.h" 3
+}}
+# 15 "C:\\Keil_v5\\ARM\\ARMCLANG\\Bin\\..\\include\\libcxx\\__type_traits/remove_cv.h" 2 3
+# 18 "C:\\Keil_v5\\ARM\\ARMCLANG\\Bin\\..\\include\\libcxx\\__type_traits/remove_cv.h" 3
+
+
+namespace std { inline namespace __2 {
+
+
+template <class _Tp>
+struct remove_cv {
+  using type __attribute__((__nodebug__)) = __remove_cv(_Tp);
+};
+
+template <class _Tp>
+using __remove_cv_t = __remove_cv(_Tp);
+# 42 "C:\\Keil_v5\\ARM\\ARMCLANG\\Bin\\..\\include\\libcxx\\__type_traits/remove_cv.h" 3
+}}
+# 15 "C:\\Keil_v5\\ARM\\ARMCLANG\\Bin\\..\\include\\libcxx\\__type_traits/is_integral.h" 2 3
+# 18 "C:\\Keil_v5\\ARM\\ARMCLANG\\Bin\\..\\include\\libcxx\\__type_traits/is_integral.h" 3
+
+
+namespace std { inline namespace __2 {
+
+template <class _Tp> struct __libcpp_is_integral { enum { value = 0 }; };
+template <> struct __libcpp_is_integral<bool> { enum { value = 1 }; };
+template <> struct __libcpp_is_integral<char> { enum { value = 1 }; };
+template <> struct __libcpp_is_integral<signed char> { enum { value = 1 }; };
+template <> struct __libcpp_is_integral<unsigned char> { enum { value = 1 }; };
+
+template <> struct __libcpp_is_integral<wchar_t> { enum { value = 1 }; };
+
+
+
+
+template <> struct __libcpp_is_integral<char16_t> { enum { value = 1 }; };
+template <> struct __libcpp_is_integral<char32_t> { enum { value = 1 }; };
+template <> struct __libcpp_is_integral<short> { enum { value = 1 }; };
+template <> struct __libcpp_is_integral<unsigned short> { enum { value = 1 }; };
+template <> struct __libcpp_is_integral<int> { enum { value = 1 }; };
+template <> struct __libcpp_is_integral<unsigned int> { enum { value = 1 }; };
+template <> struct __libcpp_is_integral<long> { enum { value = 1 }; };
+template <> struct __libcpp_is_integral<unsigned long> { enum { value = 1 }; };
+template <> struct __libcpp_is_integral<long long> { enum { value = 1 }; };
+template <> struct __libcpp_is_integral<unsigned long long> { enum { value = 1 }; };
+
+
+
+
+
+
+
+template <class _Tp>
+struct __attribute__((__type_visibility__("default"))) is_integral : _BoolConstant<__is_integral(_Tp)> { };
+# 70 "C:\\Keil_v5\\ARM\\ARMCLANG\\Bin\\..\\include\\libcxx\\__type_traits/is_integral.h" 3
+}}
+# 41 "C:\\Keil_v5\\ARM\\ARMCLANG\\Bin\\..\\include\\libcxx\\cstddef" 2 3
+# 1 "C:\\Keil_v5\\ARM\\ARMCLANG\\Bin\\..\\include\\libcxx\\version" 1 3
+# 205 "C:\\Keil_v5\\ARM\\ARMCLANG\\Bin\\..\\include\\libcxx\\version" 3
+# 42 "C:\\Keil_v5\\ARM\\ARMCLANG\\Bin\\..\\include\\libcxx\\cstddef" 2 3
+
+# 1 "C:\\Keil_v5\\ARM\\ARMCLANG\\Bin\\..\\include\\libcxx\\stddef.h" 1 3
+# 43 "C:\\Keil_v5\\ARM\\ARMCLANG\\Bin\\..\\include\\libcxx\\stddef.h" 3
+
+
+# 1 "C:\\Keil_v5\\ARM\\ARMCLANG\\Bin\\..\\include\\stddef.h" 1 3
+# 28 "C:\\Keil_v5\\ARM\\ARMCLANG\\Bin\\..\\include\\stddef.h" 3
+        namespace std {
+
+        extern "C" {
+
+
+
+
+
+
+
+  typedef signed int ptrdiff_t;
+
+
+
+
+
+
+
+    typedef unsigned int size_t;
+# 95 "C:\\Keil_v5\\ARM\\ARMCLANG\\Bin\\..\\include\\stddef.h" 3
+  typedef long double max_align_t;
+
+
+
+         }
+      }
+
+
+
+
+
+
+      using ::std::size_t;
+      using ::std::ptrdiff_t;
+
+        using ::std::max_align_t;
+# 46 "C:\\Keil_v5\\ARM\\ARMCLANG\\Bin\\..\\include\\libcxx\\stddef.h" 2 3
+
+
+    typedef decltype(nullptr) nullptr_t;
+# 44 "C:\\Keil_v5\\ARM\\ARMCLANG\\Bin\\..\\include\\libcxx\\cstddef" 2 3
+# 55 "C:\\Keil_v5\\ARM\\ARMCLANG\\Bin\\..\\include\\libcxx\\cstddef" 3
+
+
+namespace std { inline namespace __2 {
+
+using ::nullptr_t;
+using ::ptrdiff_t __attribute__((__using_if_exists__));
+using ::size_t __attribute__((__using_if_exists__));
+
+
+using ::max_align_t __attribute__((__using_if_exists__));
+
+
+}}
+# 4 "Components/Graphics/Basic/Size.hpp" 2
+# 1 "C:\\Keil_v5\\ARM\\ARMCLANG\\Bin\\..\\include\\libcxx\\cstdint" 1 3
+# 146 "C:\\Keil_v5\\ARM\\ARMCLANG\\Bin\\..\\include\\libcxx\\cstdint" 3
 # 1 "C:\\Keil_v5\\ARM\\ARMCLANG\\Bin\\..\\include\\libcxx\\stdint.h" 1 3
 # 110 "C:\\Keil_v5\\ARM\\ARMCLANG\\Bin\\..\\include\\libcxx\\stdint.h" 3
 # 123 "C:\\Keil_v5\\ARM\\ARMCLANG\\Bin\\..\\include\\libcxx\\stdint.h" 3
@@ -176,7 +391,28 @@ using ::intmax_t __attribute__((__using_if_exists__));
 using ::uintmax_t __attribute__((__using_if_exists__));
 
 }}
+# 5 "Components/Graphics/Basic/Size.hpp" 2
+
+
+
+namespace Graphics {
+
+class Offset;
+
+class Size {
+  public:
+    std::uint16_t width;
+    std::uint16_t height;
+
+    constexpr Size(std::uint16_t width = 0, std::uint16_t height = 0) : width(width), height(height){};
+    std::size_t getArea(void) const;
+    Size operator+(Offset offset) const;
+
+    Offset toOffset() const;
+};
+}
 # 4 "Components/Graphics/Basic/Offset.hpp" 2
+
 # 1 "C:\\Keil_v5\\ARM\\ARMCLANG\\Bin\\..\\include\\libcxx\\cstdlib" 1 3
 # 87 "C:\\Keil_v5\\ARM\\ARMCLANG\\Bin\\..\\include\\libcxx\\cstdlib" 3
 # 1 "C:\\Keil_v5\\ARM\\ARMCLANG\\Bin\\..\\include\\libcxx\\stdlib.h" 1 3
@@ -573,243 +809,6 @@ using ::quick_exit __attribute__((__using_if_exists__));
 
 
 }}
-# 5 "Components/Graphics/Basic/Offset.hpp" 2
-# 1 "Components/Graphics/Basic/Size.hpp" 1
-
-
-# 1 "C:\\Keil_v5\\ARM\\ARMCLANG\\Bin\\..\\include\\libcxx\\cstddef" 1 3
-# 38 "C:\\Keil_v5\\ARM\\ARMCLANG\\Bin\\..\\include\\libcxx\\cstddef" 3
-# 1 "C:\\Keil_v5\\ARM\\ARMCLANG\\Bin\\..\\include\\libcxx\\__type_traits/enable_if.h" 1 3
-# 16 "C:\\Keil_v5\\ARM\\ARMCLANG\\Bin\\..\\include\\libcxx\\__type_traits/enable_if.h" 3
-
-
-namespace std { inline namespace __2 {
-
-template <bool, class _Tp = void> struct __attribute__((__type_visibility__("default"))) enable_if {};
-template <class _Tp> struct __attribute__((__type_visibility__("default"))) enable_if<true, _Tp> {typedef _Tp type;};
-
-template <bool _Bp, class _Tp = void> using __enable_if_t __attribute__((__nodebug__)) = typename enable_if<_Bp, _Tp>::type;
-
-
-
-
-
-}}
-# 39 "C:\\Keil_v5\\ARM\\ARMCLANG\\Bin\\..\\include\\libcxx\\cstddef" 2 3
-# 1 "C:\\Keil_v5\\ARM\\ARMCLANG\\Bin\\..\\include\\libcxx\\__type_traits/integral_constant.h" 1 3
-# 16 "C:\\Keil_v5\\ARM\\ARMCLANG\\Bin\\..\\include\\libcxx\\__type_traits/integral_constant.h" 3
-
-
-namespace std { inline namespace __2 {
-
-template <class _Tp, _Tp __v>
-struct __attribute__((__type_visibility__("default"))) integral_constant
-{
-  static constexpr const _Tp value = __v;
-  typedef _Tp value_type;
-  typedef integral_constant type;
-  __attribute__((__visibility__("hidden"))) __attribute__((__exclude_from_explicit_instantiation__)) __attribute__((__abi_tag__("v16000")))
-  constexpr operator value_type() const noexcept {return value;}
-
-
-
-
-};
-
-template <class _Tp, _Tp __v>
-constexpr const _Tp integral_constant<_Tp, __v>::value;
-
-typedef integral_constant<bool, true> true_type;
-typedef integral_constant<bool, false> false_type;
-
-template <bool _Val>
-using _BoolConstant __attribute__((__nodebug__)) = integral_constant<bool, _Val>;
-
-
-
-
-
-
-}}
-# 40 "C:\\Keil_v5\\ARM\\ARMCLANG\\Bin\\..\\include\\libcxx\\cstddef" 2 3
-# 1 "C:\\Keil_v5\\ARM\\ARMCLANG\\Bin\\..\\include\\libcxx\\__type_traits/is_integral.h" 1 3
-# 14 "C:\\Keil_v5\\ARM\\ARMCLANG\\Bin\\..\\include\\libcxx\\__type_traits/is_integral.h" 3
-# 1 "C:\\Keil_v5\\ARM\\ARMCLANG\\Bin\\..\\include\\libcxx\\__type_traits/remove_cv.h" 1 3
-# 13 "C:\\Keil_v5\\ARM\\ARMCLANG\\Bin\\..\\include\\libcxx\\__type_traits/remove_cv.h" 3
-# 1 "C:\\Keil_v5\\ARM\\ARMCLANG\\Bin\\..\\include\\libcxx\\__type_traits/remove_const.h" 1 3
-# 16 "C:\\Keil_v5\\ARM\\ARMCLANG\\Bin\\..\\include\\libcxx\\__type_traits/remove_const.h" 3
-
-
-namespace std { inline namespace __2 {
-
-
-template <class _Tp>
-struct remove_const {
-  using type __attribute__((__nodebug__)) = __remove_const(_Tp);
-};
-
-template <class _Tp>
-using __remove_const_t = __remove_const(_Tp);
-# 40 "C:\\Keil_v5\\ARM\\ARMCLANG\\Bin\\..\\include\\libcxx\\__type_traits/remove_const.h" 3
-}}
-# 14 "C:\\Keil_v5\\ARM\\ARMCLANG\\Bin\\..\\include\\libcxx\\__type_traits/remove_cv.h" 2 3
-# 1 "C:\\Keil_v5\\ARM\\ARMCLANG\\Bin\\..\\include\\libcxx\\__type_traits/remove_volatile.h" 1 3
-# 16 "C:\\Keil_v5\\ARM\\ARMCLANG\\Bin\\..\\include\\libcxx\\__type_traits/remove_volatile.h" 3
-
-
-namespace std { inline namespace __2 {
-
-
-template <class _Tp>
-struct remove_volatile {
-  using type __attribute__((__nodebug__)) = __remove_volatile(_Tp);
-};
-
-template <class _Tp>
-using __remove_volatile_t = __remove_volatile(_Tp);
-# 40 "C:\\Keil_v5\\ARM\\ARMCLANG\\Bin\\..\\include\\libcxx\\__type_traits/remove_volatile.h" 3
-}}
-# 15 "C:\\Keil_v5\\ARM\\ARMCLANG\\Bin\\..\\include\\libcxx\\__type_traits/remove_cv.h" 2 3
-# 18 "C:\\Keil_v5\\ARM\\ARMCLANG\\Bin\\..\\include\\libcxx\\__type_traits/remove_cv.h" 3
-
-
-namespace std { inline namespace __2 {
-
-
-template <class _Tp>
-struct remove_cv {
-  using type __attribute__((__nodebug__)) = __remove_cv(_Tp);
-};
-
-template <class _Tp>
-using __remove_cv_t = __remove_cv(_Tp);
-# 42 "C:\\Keil_v5\\ARM\\ARMCLANG\\Bin\\..\\include\\libcxx\\__type_traits/remove_cv.h" 3
-}}
-# 15 "C:\\Keil_v5\\ARM\\ARMCLANG\\Bin\\..\\include\\libcxx\\__type_traits/is_integral.h" 2 3
-# 18 "C:\\Keil_v5\\ARM\\ARMCLANG\\Bin\\..\\include\\libcxx\\__type_traits/is_integral.h" 3
-
-
-namespace std { inline namespace __2 {
-
-template <class _Tp> struct __libcpp_is_integral { enum { value = 0 }; };
-template <> struct __libcpp_is_integral<bool> { enum { value = 1 }; };
-template <> struct __libcpp_is_integral<char> { enum { value = 1 }; };
-template <> struct __libcpp_is_integral<signed char> { enum { value = 1 }; };
-template <> struct __libcpp_is_integral<unsigned char> { enum { value = 1 }; };
-
-template <> struct __libcpp_is_integral<wchar_t> { enum { value = 1 }; };
-
-
-
-
-template <> struct __libcpp_is_integral<char16_t> { enum { value = 1 }; };
-template <> struct __libcpp_is_integral<char32_t> { enum { value = 1 }; };
-template <> struct __libcpp_is_integral<short> { enum { value = 1 }; };
-template <> struct __libcpp_is_integral<unsigned short> { enum { value = 1 }; };
-template <> struct __libcpp_is_integral<int> { enum { value = 1 }; };
-template <> struct __libcpp_is_integral<unsigned int> { enum { value = 1 }; };
-template <> struct __libcpp_is_integral<long> { enum { value = 1 }; };
-template <> struct __libcpp_is_integral<unsigned long> { enum { value = 1 }; };
-template <> struct __libcpp_is_integral<long long> { enum { value = 1 }; };
-template <> struct __libcpp_is_integral<unsigned long long> { enum { value = 1 }; };
-
-
-
-
-
-
-
-template <class _Tp>
-struct __attribute__((__type_visibility__("default"))) is_integral : _BoolConstant<__is_integral(_Tp)> { };
-# 70 "C:\\Keil_v5\\ARM\\ARMCLANG\\Bin\\..\\include\\libcxx\\__type_traits/is_integral.h" 3
-}}
-# 41 "C:\\Keil_v5\\ARM\\ARMCLANG\\Bin\\..\\include\\libcxx\\cstddef" 2 3
-# 1 "C:\\Keil_v5\\ARM\\ARMCLANG\\Bin\\..\\include\\libcxx\\version" 1 3
-# 205 "C:\\Keil_v5\\ARM\\ARMCLANG\\Bin\\..\\include\\libcxx\\version" 3
-# 42 "C:\\Keil_v5\\ARM\\ARMCLANG\\Bin\\..\\include\\libcxx\\cstddef" 2 3
-
-# 1 "C:\\Keil_v5\\ARM\\ARMCLANG\\Bin\\..\\include\\libcxx\\stddef.h" 1 3
-# 43 "C:\\Keil_v5\\ARM\\ARMCLANG\\Bin\\..\\include\\libcxx\\stddef.h" 3
-
-
-# 1 "C:\\Keil_v5\\ARM\\ARMCLANG\\Bin\\..\\include\\stddef.h" 1 3
-# 28 "C:\\Keil_v5\\ARM\\ARMCLANG\\Bin\\..\\include\\stddef.h" 3
-        namespace std {
-
-        extern "C" {
-
-
-
-
-
-
-
-  typedef signed int ptrdiff_t;
-
-
-
-
-
-
-
-    typedef unsigned int size_t;
-# 95 "C:\\Keil_v5\\ARM\\ARMCLANG\\Bin\\..\\include\\stddef.h" 3
-  typedef long double max_align_t;
-
-
-
-         }
-      }
-
-
-
-
-
-
-      using ::std::size_t;
-      using ::std::ptrdiff_t;
-
-        using ::std::max_align_t;
-# 46 "C:\\Keil_v5\\ARM\\ARMCLANG\\Bin\\..\\include\\libcxx\\stddef.h" 2 3
-
-
-    typedef decltype(nullptr) nullptr_t;
-# 44 "C:\\Keil_v5\\ARM\\ARMCLANG\\Bin\\..\\include\\libcxx\\cstddef" 2 3
-# 55 "C:\\Keil_v5\\ARM\\ARMCLANG\\Bin\\..\\include\\libcxx\\cstddef" 3
-
-
-namespace std { inline namespace __2 {
-
-using ::nullptr_t;
-using ::ptrdiff_t __attribute__((__using_if_exists__));
-using ::size_t __attribute__((__using_if_exists__));
-
-
-using ::max_align_t __attribute__((__using_if_exists__));
-
-
-}}
-# 4 "Components/Graphics/Basic/Size.hpp" 2
-
-
-
-
-namespace Graphics {
-
-class Offset;
-
-class Size {
-  public:
-    std::uint16_t width;
-    std::uint16_t height;
-
-    Size(std::uint16_t width = 0, std::uint16_t height = 0);
-    std::size_t getArea(void) const ;
-    Size operator+(Offset offset) const;
-
-    Offset toOffset() const ;
-};
-}
 # 6 "Components/Graphics/Basic/Offset.hpp" 2
 
 namespace Graphics {
@@ -821,11 +820,10 @@ class Offset {
     std::int16_t x;
     std::int16_t y;
 
-    Offset(std::int16_t x = 0, std::uint16_t y = 0);
+    constexpr Offset(std::int16_t x = 0, std::uint16_t y = 0) : x(x), y(y){};
 
     Offset operator+(const Offset offset) const;
     Offset operator-(const Offset offset) const;
-
 
     Offset abs(void) const;
     Offset swapXY(void) const;
@@ -863,13 +861,10 @@ inline bool Offset::inArea(const Offset start, const Offset end) {
     return resultStart && resultEnd;
 }
 }
-# 39 "Components/Graphics/Basic/Offset.hpp" 2
+# 38 "Components/Graphics/Basic/Offset.hpp" 2
 # 2 "Components/Graphics/Basic/Offset.cpp" 2
 
 namespace Graphics {
-Offset::Offset(std::int16_t x, std::uint16_t y)
-    : x(x), y(y) {
-}
 
 Offset Offset::operator+(const Offset offset) const {
     return Offset(this->x + offset.x, this->y + offset.y);

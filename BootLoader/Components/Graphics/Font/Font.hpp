@@ -6,9 +6,9 @@
 namespace Graphics {
 class FontCharacter : public Bitmap {
   public:
-    const std::uint32_t charater;
-    const Offset offset;
-    FontCharacter(std::uint32_t charater, const Resource &res, Size size, Offset offset);
+    std::uint32_t charater;
+    Offset offset;
+    constexpr FontCharacter(std::uint32_t charater, const Resource &res, Size size, Offset offset): Bitmap(res, size), offset(offset), charater(charater){};
 };
 
 class FontCharacterSet {

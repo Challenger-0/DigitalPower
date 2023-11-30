@@ -3,8 +3,6 @@
 #include "Resource/LocalResource.hpp"
 #include <cstdint>
 
-#define READ_ONLY_SECTION __attribute__((section("+RO")))
-
 
 static const std::uint8_t font_misterpixel_ch0x21_content[3] = {0xff, 0xff, 0xf0};                                                                                                                                //!
 static const std::uint8_t font_misterpixel_ch0x22_content[2] = {0xb6, 0xd0};                                                                                                                                      //"

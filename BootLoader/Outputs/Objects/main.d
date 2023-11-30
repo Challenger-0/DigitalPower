@@ -65,15 +65,15 @@
   Components\FreeRTOS\include\list.h BSP\TimerChannel.hpp \
   Util\CallbackFunction.hpp BSP\Timer.hpp \
   Components\Graphics\Font\Font.hpp Components\Graphics\Basic\Bitmap.hpp \
-  Resource\Resource.hpp Components\Graphics\Basic\Size.hpp \
   Components\Graphics\Basic\Offset.hpp \
+  Components\Graphics\Basic\Size.hpp \
   C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\libcxx\cstdlib \
   C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\libcxx\stdlib.h \
   C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdlib.h \
-  Components\Graphics\Basic\Offset.ipp Onboards\Onboards.hpp \
-  Onboards\ST7735.hpp Components\Graphics\GraphicsDevice.hpp \
-  Util\Color\RGB565.hpp Util\Color\Color.hpp \
-  Components\Graphics\Graphics.hpp \
+  Components\Graphics\Basic\Offset.ipp Resource\Resource.hpp \
+  Onboards\Onboards.hpp Onboards\ST7735.hpp \
+  Components\Graphics\GraphicsDevice.hpp Util\Color\RGB565.hpp \
+  Util\Color\Color.hpp Components\Graphics\Graphics.hpp \
   Components\Graphics\Basic\GraphicsFunction.hpp \
   Components\Graphics\Graphics.ipp \
   C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\libcxx\cstring \

@@ -6288,6 +6288,31 @@ class SPI : public MutexLock {
 # 1 "./Components/Graphics/Basic/Offset.hpp" 1
 
 
+# 1 "./Components/Graphics/Basic/Size.hpp" 1
+
+
+
+
+
+
+
+namespace Graphics {
+
+class Offset;
+
+class Size {
+  public:
+    std::uint16_t width;
+    std::uint16_t height;
+
+    constexpr Size(std::uint16_t width = 0, std::uint16_t height = 0) : width(width), height(height){};
+    std::size_t getArea(void) const;
+    Size operator+(Offset offset) const;
+
+    Offset toOffset() const;
+};
+}
+# 4 "./Components/Graphics/Basic/Offset.hpp" 2
 
 # 1 "C:\\Keil_v5\\ARM\\ARMCLANG\\Bin\\..\\include\\libcxx\\cstdlib" 1 3
 # 87 "C:\\Keil_v5\\ARM\\ARMCLANG\\Bin\\..\\include\\libcxx\\cstdlib" 3
@@ -6685,31 +6710,6 @@ using ::quick_exit __attribute__((__using_if_exists__));
 
 
 }}
-# 5 "./Components/Graphics/Basic/Offset.hpp" 2
-# 1 "./Components/Graphics/Basic/Size.hpp" 1
-
-
-
-
-
-
-
-namespace Graphics {
-
-class Offset;
-
-class Size {
-  public:
-    std::uint16_t width;
-    std::uint16_t height;
-
-    Size(std::uint16_t width = 0, std::uint16_t height = 0);
-    std::size_t getArea(void) const ;
-    Size operator+(Offset offset) const;
-
-    Offset toOffset() const ;
-};
-}
 # 6 "./Components/Graphics/Basic/Offset.hpp" 2
 
 namespace Graphics {
@@ -6721,11 +6721,10 @@ class Offset {
     std::int16_t x;
     std::int16_t y;
 
-    Offset(std::int16_t x = 0, std::uint16_t y = 0);
+    constexpr Offset(std::int16_t x = 0, std::uint16_t y = 0) : x(x), y(y){};
 
     Offset operator+(const Offset offset) const;
     Offset operator-(const Offset offset) const;
-
 
     Offset abs(void) const;
     Offset swapXY(void) const;
@@ -6763,7 +6762,7 @@ inline bool Offset::inArea(const Offset start, const Offset end) {
     return resultStart && resultEnd;
 }
 }
-# 39 "./Components/Graphics/Basic/Offset.hpp" 2
+# 38 "./Components/Graphics/Basic/Offset.hpp" 2
 # 7 "./Components/Graphics\\GraphicsDevice.hpp" 2
 
 
@@ -6840,6 +6839,7 @@ class ST7735 : public Graphics::GraphicsDevice<RGB565> {
 # 1 "./Components/Graphics/Basic/Bitmap.hpp" 1
 
 
+
 # 1 ".\\Resource/Resource.hpp" 1
 
 
@@ -6847,16 +6847,15 @@ class ST7735 : public Graphics::GraphicsDevice<RGB565> {
 
 class Resource {
   protected:
-    const size_t _size;
+    size_t _size;
 
   public:
-    Resource(size_t size);
+    constexpr Resource(size_t size) : _size(size){};
     std::size_t size() const;
     virtual const void *request() const = 0;
     virtual void release() const = 0;
 };
-# 4 "./Components/Graphics/Basic/Bitmap.hpp" 2
-
+# 5 "./Components/Graphics/Basic/Bitmap.hpp" 2
 
 
 namespace Graphics {
@@ -6866,7 +6865,7 @@ class Bitmap;
 class ActivatedBitmap {
   private:
     const Bitmap &bitmap;
-    const std::uint8_t * data;
+    const std::uint8_t *data;
 
   public:
     const Size size;
@@ -6884,7 +6883,7 @@ class Bitmap {
   public:
     const Size size;
 
-    Bitmap(const Resource &res, const Size size);
+    constexpr Bitmap(const Resource &res, const Size size) : res(res), size(size){};
     const ActivatedBitmap activate() const;
 };
 

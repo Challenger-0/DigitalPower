@@ -394,6 +394,7 @@ using ::uintmax_t __attribute__((__using_if_exists__));
 
 
 
+
 # 1 "C:\\Keil_v5\\ARM\\ARMCLANG\\Bin\\..\\include\\libcxx\\cstdlib" 1 3
 # 87 "C:\\Keil_v5\\ARM\\ARMCLANG\\Bin\\..\\include\\libcxx\\cstdlib" 3
 # 1 "C:\\Keil_v5\\ARM\\ARMCLANG\\Bin\\..\\include\\libcxx\\stdlib.h" 1 3
@@ -790,8 +791,7 @@ using ::quick_exit __attribute__((__using_if_exists__));
 
 
 }}
-# 5 "Components/Graphics/Basic/Offset.hpp" 2
-
+# 6 "Components/Graphics/Basic/Offset.hpp" 2
 
 namespace Graphics {
 
@@ -802,11 +802,10 @@ class Offset {
     std::int16_t x;
     std::int16_t y;
 
-    Offset(std::int16_t x = 0, std::uint16_t y = 0);
+    constexpr Offset(std::int16_t x = 0, std::uint16_t y = 0) : x(x), y(y){};
 
     Offset operator+(const Offset offset) const;
     Offset operator-(const Offset offset) const;
-
 
     Offset abs(void) const;
     Offset swapXY(void) const;
@@ -844,7 +843,7 @@ inline bool Offset::inArea(const Offset start, const Offset end) {
     return resultStart && resultEnd;
 }
 }
-# 39 "Components/Graphics/Basic/Offset.hpp" 2
+# 38 "Components/Graphics/Basic/Offset.hpp" 2
 # 7 "Components/Graphics/Basic/Size.hpp" 2
 
 namespace Graphics {
@@ -856,19 +855,17 @@ class Size {
     std::uint16_t width;
     std::uint16_t height;
 
-    Size(std::uint16_t width = 0, std::uint16_t height = 0);
-    std::size_t getArea(void) const ;
+    constexpr Size(std::uint16_t width = 0, std::uint16_t height = 0) : width(width), height(height){};
+    std::size_t getArea(void) const;
     Size operator+(Offset offset) const;
 
-    Offset toOffset() const ;
+    Offset toOffset() const;
 };
 }
 # 2 "Components/Graphics/Basic/Size.cpp" 2
 
 namespace Graphics {
-Size::Size(std::uint16_t width, std::uint16_t height)
-    : width(width), height(height) {
-}
+
 
 std::size_t Size::getArea(void) const {
     return width * height;

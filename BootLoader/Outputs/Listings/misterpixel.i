@@ -13,7 +13,10 @@
 # 1 "./Components/Graphics\\Basic/Bitmap.hpp" 1
 
 
-# 1 ".\\Resource/Resource.hpp" 1
+# 1 "./Components/Graphics\\Basic/Offset.hpp" 1
+
+
+# 1 "./Components/Graphics\\Basic/Size.hpp" 1
 
 
 # 1 "C:\\Keil_v5\\ARM\\ARMCLANG\\Bin\\..\\include\\libcxx\\cstddef" 1 3
@@ -252,23 +255,7 @@ using ::max_align_t __attribute__((__using_if_exists__));
 
 
 }}
-# 4 ".\\Resource/Resource.hpp" 2
-
-class Resource {
-  protected:
-    const size_t _size;
-
-  public:
-    Resource(size_t size);
-    std::size_t size() const;
-    virtual const void *request() const = 0;
-    virtual void release() const = 0;
-};
-# 4 "./Components/Graphics\\Basic/Bitmap.hpp" 2
-# 1 "./Components/Graphics\\Basic/Size.hpp" 1
-
-
-
+# 4 "./Components/Graphics\\Basic/Size.hpp" 2
 # 1 "C:\\Keil_v5\\ARM\\ARMCLANG\\Bin\\..\\include\\libcxx\\cstdint" 1 3
 # 146 "C:\\Keil_v5\\ARM\\ARMCLANG\\Bin\\..\\include\\libcxx\\cstdint" 3
 # 1 "C:\\Keil_v5\\ARM\\ARMCLANG\\Bin\\..\\include\\libcxx\\stdint.h" 1 3
@@ -414,9 +401,25 @@ using ::uintmax_t __attribute__((__using_if_exists__));
 }}
 # 5 "./Components/Graphics\\Basic/Size.hpp" 2
 
-# 1 "./Components/Graphics\\Basic/Offset.hpp" 1
 
 
+namespace Graphics {
+
+class Offset;
+
+class Size {
+  public:
+    std::uint16_t width;
+    std::uint16_t height;
+
+    constexpr Size(std::uint16_t width = 0, std::uint16_t height = 0) : width(width), height(height){};
+    std::size_t getArea(void) const;
+    Size operator+(Offset offset) const;
+
+    Offset toOffset() const;
+};
+}
+# 4 "./Components/Graphics\\Basic/Offset.hpp" 2
 
 # 1 "C:\\Keil_v5\\ARM\\ARMCLANG\\Bin\\..\\include\\libcxx\\cstdlib" 1 3
 # 87 "C:\\Keil_v5\\ARM\\ARMCLANG\\Bin\\..\\include\\libcxx\\cstdlib" 3
@@ -814,8 +817,7 @@ using ::quick_exit __attribute__((__using_if_exists__));
 
 
 }}
-# 5 "./Components/Graphics\\Basic/Offset.hpp" 2
-
+# 6 "./Components/Graphics\\Basic/Offset.hpp" 2
 
 namespace Graphics {
 
@@ -826,11 +828,10 @@ class Offset {
     std::int16_t x;
     std::int16_t y;
 
-    Offset(std::int16_t x = 0, std::uint16_t y = 0);
+    constexpr Offset(std::int16_t x = 0, std::uint16_t y = 0) : x(x), y(y){};
 
     Offset operator+(const Offset offset) const;
     Offset operator-(const Offset offset) const;
-
 
     Offset abs(void) const;
     Offset swapXY(void) const;
@@ -868,25 +869,23 @@ inline bool Offset::inArea(const Offset start, const Offset end) {
     return resultStart && resultEnd;
 }
 }
-# 39 "./Components/Graphics\\Basic/Offset.hpp" 2
-# 7 "./Components/Graphics\\Basic/Size.hpp" 2
+# 38 "./Components/Graphics\\Basic/Offset.hpp" 2
+# 4 "./Components/Graphics\\Basic/Bitmap.hpp" 2
+# 1 ".\\Resource/Resource.hpp" 1
 
-namespace Graphics {
 
-class Offset;
 
-class Size {
+
+class Resource {
+  protected:
+    size_t _size;
+
   public:
-    std::uint16_t width;
-    std::uint16_t height;
-
-    Size(std::uint16_t width = 0, std::uint16_t height = 0);
-    std::size_t getArea(void) const ;
-    Size operator+(Offset offset) const;
-
-    Offset toOffset() const ;
+    constexpr Resource(size_t size) : _size(size){};
+    std::size_t size() const;
+    virtual const void *request() const = 0;
+    virtual void release() const = 0;
 };
-}
 # 5 "./Components/Graphics\\Basic/Bitmap.hpp" 2
 
 
@@ -897,7 +896,7 @@ class Bitmap;
 class ActivatedBitmap {
   private:
     const Bitmap &bitmap;
-    const std::uint8_t * data;
+    const std::uint8_t *data;
 
   public:
     const Size size;
@@ -915,7 +914,7 @@ class Bitmap {
   public:
     const Size size;
 
-    Bitmap(const Resource &res, const Size size);
+    constexpr Bitmap(const Resource &res, const Size size) : res(res), size(size){};
     const ActivatedBitmap activate() const;
 };
 
@@ -926,9 +925,9 @@ class Bitmap {
 namespace Graphics {
 class FontCharacter : public Bitmap {
   public:
-    const std::uint32_t charater;
-    const Offset offset;
-    FontCharacter(std::uint32_t charater, const Resource &res, Size size, Offset offset);
+    std::uint32_t charater;
+    Offset offset;
+    constexpr FontCharacter(std::uint32_t charater, const Resource &res, Size size, Offset offset): Bitmap(res, size), offset(offset), charater(charater){};
 };
 
 class FontCharacterSet {
@@ -959,16 +958,14 @@ class Font {
 
 class LocalResource : public Resource {
   protected:
-    const void * const _resource;
+    const void *const _resource;
 
   public:
-    LocalResource(const void *resource, std::size_t size);
+    constexpr LocalResource(const void *resource, std::size_t size) : Resource(size), _resource(resource){};
     virtual const void *request() const;
     virtual void release() const;
 };
 # 4 "Resource/Fonts/MisterPixel.cpp" 2
-
-
 
 
 

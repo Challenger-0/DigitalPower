@@ -19,9 +19,6 @@ bool Graphics::ActivatedBitmap::getPixel(Offset offset) {
     return result;
 }
 
-Graphics::Bitmap::Bitmap(const Resource &res, const Size size)
-    : res(res), size(size) {
-}
 
 const Graphics::ActivatedBitmap Graphics::Bitmap::activate() const {
     return ActivatedBitmap(*this);

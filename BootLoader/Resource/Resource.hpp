@@ -4,12 +4,11 @@
 
 class Resource {
   protected:
-    const size_t _size;
+    size_t _size;
 
   public:
-    Resource(size_t size);
+    constexpr Resource(size_t size) : _size(size){};
     std::size_t size() const;
     virtual const void *request() const = 0;
     virtual void release() const = 0;
 };
-

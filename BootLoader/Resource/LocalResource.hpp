@@ -4,10 +4,10 @@
 
 class LocalResource : public Resource {
   protected:
-    const void * const _resource;
+    const void *const _resource;
 
   public:
-    LocalResource(const void *resource, std::size_t size);
+    constexpr LocalResource(const void *resource, std::size_t size) : Resource(size), _resource(resource){};
     virtual const void *request() const;
     virtual void release() const;
 };

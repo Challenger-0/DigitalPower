@@ -1,27 +1,26 @@
 #pragma once
 
+#include "Size.hpp"
 #include <cstdint>
 #include <cstdlib>
-#include "Size.hpp"
 
 namespace Graphics {
-    
-class Size;    
+
+class Size;
 
 class Offset {
   public:
     std::int16_t x;
     std::int16_t y;
 
-    Offset(std::int16_t x = 0, std::uint16_t y = 0);
+    constexpr Offset(std::int16_t x = 0, std::uint16_t y = 0) : x(x), y(y){};
 
     Offset operator+(const Offset offset) const;
     Offset operator-(const Offset offset) const;
 
-
     Offset abs(void) const;
     Offset swapXY(void) const;
-    void swapXWith(Offset &offset); 
+    void swapXWith(Offset &offset);
     void swapYWith(Offset &offset);
     void swapWith(Offset &offset);
 
@@ -36,4 +35,3 @@ class Offset {
 } // namespace Graphics
 
 #include "Offset.ipp"
-

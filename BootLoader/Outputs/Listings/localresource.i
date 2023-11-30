@@ -251,10 +251,10 @@ using ::max_align_t __attribute__((__using_if_exists__));
 
 class Resource {
   protected:
-    const size_t _size;
+    size_t _size;
 
   public:
-    Resource(size_t size);
+    constexpr Resource(size_t size) : _size(size){};
     std::size_t size() const;
     virtual const void *request() const = 0;
     virtual void release() const = 0;
@@ -263,18 +263,15 @@ class Resource {
 
 class LocalResource : public Resource {
   protected:
-    const void * const _resource;
+    const void *const _resource;
 
   public:
-    LocalResource(const void *resource, std::size_t size);
+    constexpr LocalResource(const void *resource, std::size_t size) : Resource(size), _resource(resource){};
     virtual const void *request() const;
     virtual void release() const;
 };
 # 2 "Resource/LocalResource.cpp" 2
 
-LocalResource::LocalResource(const void *resource, std::size_t size)
-    : Resource(size), _resource(resource) {
-}
 
 const void *LocalResource::request() const {
     return _resource;

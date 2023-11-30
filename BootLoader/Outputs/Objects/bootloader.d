@@ -66,10 +66,10 @@
   Components\FreeRTOS\include\list.h \
   Components\Graphics\GraphicsDevice.hpp \
   Components\Graphics\Basic\Offset.hpp \
+  Components\Graphics\Basic\Size.hpp \
   C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\libcxx\cstdlib \
   C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\libcxx\stdlib.h \
   C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdlib.h \
-  Components\Graphics\Basic\Size.hpp \
   Components\Graphics\Basic\Offset.ipp Util\Color\RGB565.hpp \
   Util\Color\Color.hpp Components\Graphics\Graphics.hpp \
   Components\Graphics\Basic\GraphicsFunction.hpp \
