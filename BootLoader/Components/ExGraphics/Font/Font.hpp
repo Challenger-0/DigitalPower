@@ -3,7 +3,7 @@
 #include "Basic/Bitmap.hpp"
 #include "Basic/Offset.hpp"
 
-namespace Graphics {
+namespace ExGraphics {
 class FontCharacter : public Bitmap {
   public:
     std::uint32_t charater;

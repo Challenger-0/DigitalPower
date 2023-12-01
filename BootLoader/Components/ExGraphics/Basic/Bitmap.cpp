@@ -1,15 +1,15 @@
 #include "Bitmap.hpp"
 
-Graphics::ActivatedBitmap::ActivatedBitmap(const Bitmap &bitmap)
+ExGraphics::ActivatedBitmap::ActivatedBitmap(const Bitmap &bitmap)
     : bitmap(bitmap), size(bitmap.size) {
     data = (const uint8_t *)(bitmap.res.request());
 }
 
-Graphics::ActivatedBitmap::~ActivatedBitmap() {
+ExGraphics::ActivatedBitmap::~ActivatedBitmap() {
     bitmap.res.release();
 }
 
-bool Graphics::ActivatedBitmap::getPixel(Offset offset) {
+bool ExGraphics::ActivatedBitmap::getPixel(Offset offset) {
     std::size_t pixNum = offset.y * size.width + offset.x;
     std::size_t byteNum = pixNum / 8;
     std::size_t bitNum = pixNum % 8;
@@ -20,6 +20,6 @@ bool Graphics::ActivatedBitmap::getPixel(Offset offset) {
 }
 
 
-const Graphics::ActivatedBitmap Graphics::Bitmap::activate() const {
+const ExGraphics::ActivatedBitmap ExGraphics::Bitmap::activate() const {
     return ActivatedBitmap(*this);
 }

@@ -1,5 +1,5 @@
-./outputs/objects/focusable.o: Components\Graphics\Basic\Focusable.cpp \
-  Components\Graphics\Basic\Focusable.hpp \
+./outputs/objects/focusable.o: Components\ExGraphics\Basic\Focusable.cpp \
+  Components\ExGraphics\Basic\Focusable.hpp \
   C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\libcxx\cstdint \
   C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\libcxx\__assert \
   C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\libcxx\__config \

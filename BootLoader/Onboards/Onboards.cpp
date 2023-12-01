@@ -2,7 +2,7 @@
 #include "BSP/BSP.hpp"
 
 ST7735 Onboards::display(BSP::SPIDisplay, GPIOB, GPIO_PIN_11);
-Graphics::GraphicsClass<RGB565, 160, 80> Onboards::graphics(Onboards::display);
+ExGraphics::GraphicsClass<RGB565, 160, 80> Onboards::graphics(Onboards::display);
 WS2812PixelData ws2812Data[4 + 1];
 WS2812 Onboards::ws2812(BSP::ws2812TimerChannel, ws2812Data, sizeof(ws2812Data) / sizeof(ws2812Data[0]));
 

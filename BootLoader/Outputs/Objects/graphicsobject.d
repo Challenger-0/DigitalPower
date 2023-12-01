@@ -1,10 +1,10 @@
 ./outputs/objects/graphicsobject.o: \
-  Components\Graphics\Basic\GraphicsObject.cpp \
-  Components\Graphics\Basic\GraphicsObject.hpp \
-  Components\Graphics\Graphics.hpp \
-  Components\Graphics\GraphicsDevice.hpp \
-  Components\Graphics\Basic\Offset.hpp \
-  Components\Graphics\Basic\Size.hpp \
+  Components\ExGraphics\Basic\GraphicsObject.cpp \
+  Components\ExGraphics\Basic\GraphicsObject.hpp \
+  Components\ExGraphics\Graphics.hpp \
+  Components\ExGraphics\GraphicsDevice.hpp \
+  Components\ExGraphics\Basic\Offset.hpp \
+  Components\ExGraphics\Basic\Size.hpp \
   C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\libcxx\cstddef \
   C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\libcxx\__assert \
   C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\libcxx\__config \
@@ -25,14 +25,14 @@
   C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\libcxx\cstdlib \
   C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\libcxx\stdlib.h \
   C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdlib.h \
-  Components\Graphics\Basic\Offset.ipp \
-  Components\Graphics\Basic\GraphicsFunction.hpp \
-  Components\Graphics\Basic\Bitmap.hpp Resource\Resource.hpp \
-  Util\Color\Color.hpp Components\Graphics\Graphics.ipp \
+  Components\ExGraphics\Basic\Offset.ipp \
+  Components\ExGraphics\Basic\GraphicsFunction.hpp \
+  Components\ExGraphics\Basic\Bitmap.hpp Resource\Resource.hpp \
+  Util\Color\Color.hpp Components\ExGraphics\Graphics.ipp \
   C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\libcxx\cstring \
   C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\libcxx\string.h \
   C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\string.h \
-  Components\Graphics\Basic\Focusable.hpp \
+  Components\ExGraphics\Basic\Focusable.hpp \
   C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\libcxx\numeric \
   C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\libcxx\cmath \
   C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\libcxx\type_traits \

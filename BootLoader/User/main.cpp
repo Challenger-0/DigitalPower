@@ -12,9 +12,9 @@
 
 #include <cmath>
 
-const char *test_str = "Bootloader";
+const char *test_str = "0123456789";
 
-const Graphics::Text text(Graphics::Offset(0, 0), Graphics::Size(10, 10), font_MisterPixel, test_str, Color(255, 255, 255));
+const ExGraphics::Text text(ExGraphics::Offset(0, 0), ExGraphics::Size(10, 10), font_MisterPixel, test_str, Color(255, 255, 255));
 
 std::uint32_t amp_liner_down(std::uint32_t maxAmp, std::uint32_t remainTimes, std::uint32_t totalTimes) {
     return maxAmp * remainTimes / totalTimes;
@@ -38,7 +38,7 @@ void displayTask(void *unused) {
         Onboards::graphics.fill(RGB565(0, 0, 0));
          //Onboards::graphics.drawRect(Graphics::Offset(30, 30), Graphics::Size(2, 2), Color(255, 255, 255));
         //Onboards::graphics.drawRRectFilled(Graphics::Offset(30, 30), Graphics::Size(30, 30), Color(255, 255, 255), 10);
-        text.draw(Graphics::Offset(10, 10), Onboards::graphics);
+        text.draw(ExGraphics::Offset(10, 10), Onboards::graphics);
         Onboards::graphics.update();
     }
     vTaskDelete(nullptr);
@@ -49,7 +49,7 @@ void mainTask(void *ununed) {
     BootLoader::boot();
     Onboards::init();
     // Onboards::beep.play(note_seq);
-    xTaskCreate((TaskFunction_t)displayTask, "display", configMINIMAL_STACK_SIZE + 128, nullptr, 1, nullptr);
+    xTaskCreate((TaskFunction_t)displayTask, "display", configMINIMAL_STACK_SIZE + 256, nullptr, 1, nullptr);
     Onboards::ws2812.setPixel(0, 16, 0, 0);
     Onboards::ws2812.setPixel(1, 0, 16, 0);
     Onboards::ws2812.setPixel(2, 0, 0, 16);

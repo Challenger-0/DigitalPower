@@ -1,11 +1,11 @@
 #include "Text.hpp"
 #include "Util/UTF8Praser.hpp"
 
-Graphics::Text::Text(Offset offset, Size size, const Font &font, const char *str, Color color)
+ExGraphics::Text::Text(Offset offset, Size size, const Font &font, const char *str, Color color)
     : GraphicsObject(offset, size), font(font), str(str), color(color) {
 }
 
-void Graphics::Text::draw(Offset offset, GraphicsFunction &func) const {
+void ExGraphics::Text::draw(Offset offset, GraphicsFunction &func) const {
     Offset cur = offset + this->offset;
     const char *str = this->str;
     std::uint32_t ch;

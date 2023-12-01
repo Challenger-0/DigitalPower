@@ -94,7 +94,7 @@ void ST7735::init(void) {
     spi.unlock();
 }
 
-void ST7735::update(Graphics::Offset position, Graphics::Size size, const RGB565 *buffer) {
+void ST7735::update(ExGraphics::Offset position, ExGraphics::Size size, const RGB565 *buffer) {
     std::size_t bufferLen = size.getArea() * sizeof(RGB565);
     spi.tryLock();
     setOperatingArea(position.x, position.y, position.x + size.width - 1, position.y + size.height - 1);

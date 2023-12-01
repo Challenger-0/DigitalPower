@@ -3,7 +3,7 @@
 #include <cstdint>
 #include <numeric>
 
-namespace Graphics {
+namespace ExGraphics {
 class Focusable {
   public:
     std::uint16_t index;

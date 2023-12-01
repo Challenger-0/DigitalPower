@@ -6,7 +6,7 @@
 
 #include "Util/Color/Color.hpp"
 
-namespace Graphics {
+namespace ExGraphics {
 
 /**
  * @brief

@@ -4,7 +4,7 @@
 #include <cstdint>
 #include <cstdlib>
 
-namespace Graphics {
+namespace ExGraphics {
 
 class Size;
 

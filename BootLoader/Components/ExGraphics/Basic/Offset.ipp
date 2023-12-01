@@ -2,7 +2,7 @@
 
 #include "Offset.hpp"
 
-namespace Graphics {
+namespace ExGraphics {
 template <bool includeStart, bool includeEnd>
 inline bool Offset::inArea(const Offset start, const Offset end) {
     bool resultStart, resultEnd;

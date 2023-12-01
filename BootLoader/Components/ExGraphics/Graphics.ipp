@@ -5,7 +5,7 @@
 #include <cstdlib>
 #include <cstring>
 
-namespace Graphics {
+namespace ExGraphics {
 
 template <typename ColorType, std::uint16_t displayWidth, std::uint16_t displayHeight>
 inline bool GraphicsClass<ColorType, displayWidth, displayHeight>::inDisplayArea(Offset offset) {

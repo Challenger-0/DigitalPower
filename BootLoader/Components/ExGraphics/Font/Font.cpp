@@ -1,6 +1,6 @@
 #include "Font.hpp"
 
-namespace Graphics {
+namespace ExGraphics {
 FontCharacterSet::FontCharacterSet(const FontCharacter *characters, std::size_t count)
     : characters(characters), count(count) {
 }
@@ -11,11 +11,11 @@ const FontCharacter *FontCharacterSet::find(std::uint32_t target) const {
                   mid;
     const FontCharacter *curr;
     do {
-        mid = (end - start) / 2;
+        mid = ( start + end ) / 2;
         curr = &characters[mid];
-        if (curr->charater > target)
+        if (target < curr->charater)
             end = mid - 1;
-        else if (curr->charater < target)
+        else if (target > curr->charater)
             start = mid + 1;
         else
             return curr;

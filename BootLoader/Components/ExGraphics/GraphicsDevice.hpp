@@ -7,7 +7,7 @@
 #include "Basic/Size.hpp"
 #include <cstdint>
 
-namespace Graphics {
+namespace ExGraphics {
 
 template <typename ColorType>
 class GraphicsDevice {

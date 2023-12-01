@@ -1,7 +1,7 @@
-./outputs/objects/bitmap.o: Components\Graphics\Basic\Bitmap.cpp \
-  Components\Graphics\Basic\Bitmap.hpp \
-  Components\Graphics\Basic\Offset.hpp \
-  Components\Graphics\Basic\Size.hpp \
+./outputs/objects/bitmap.o: Components\ExGraphics\Basic\Bitmap.cpp \
+  Components\ExGraphics\Basic\Bitmap.hpp \
+  Components\ExGraphics\Basic\Offset.hpp \
+  Components\ExGraphics\Basic\Size.hpp \
   C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\libcxx\cstddef \
   C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\libcxx\__assert \
   C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\libcxx\__config \
@@ -22,4 +22,4 @@
   C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\libcxx\cstdlib \
   C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\libcxx\stdlib.h \
   C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdlib.h \
-  Components\Graphics\Basic\Offset.ipp Resource\Resource.hpp
+  Components\ExGraphics\Basic\Offset.ipp Resource\Resource.hpp

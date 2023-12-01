@@ -4,7 +4,7 @@
 #include "Util/CallbackFunction.hpp"
 
 
-namespace Graphics {
+namespace ExGraphics {
 template <typename ColorType>
 class GraphicsObjectFocusable : public GraphicsObject<ColorType> {
   protected:

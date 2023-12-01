@@ -4,7 +4,7 @@
 #include "Resource/Resource.hpp"
 #include "Size.hpp"
 
-namespace Graphics {
+namespace ExGraphics {
 
 class Bitmap;
 

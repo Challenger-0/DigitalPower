@@ -1,9 +1,9 @@
 ./outputs/objects/graphicsfunction.o: \
-  Components\Graphics\Basic\GraphicsFunction.cpp \
-  Components\Graphics\Basic\GraphicsFunction.hpp \
-  Components\Graphics\Basic\Bitmap.hpp \
-  Components\Graphics\Basic\Offset.hpp \
-  Components\Graphics\Basic\Size.hpp \
+  Components\ExGraphics\Basic\GraphicsFunction.cpp \
+  Components\ExGraphics\Basic\GraphicsFunction.hpp \
+  Components\ExGraphics\Basic\Bitmap.hpp \
+  Components\ExGraphics\Basic\Offset.hpp \
+  Components\ExGraphics\Basic\Size.hpp \
   C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\libcxx\cstddef \
   C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\libcxx\__assert \
   C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\libcxx\__config \
@@ -24,5 +24,5 @@
   C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\libcxx\cstdlib \
   C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\libcxx\stdlib.h \
   C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdlib.h \
-  Components\Graphics\Basic\Offset.ipp Resource\Resource.hpp \
+  Components\ExGraphics\Basic\Offset.ipp Resource\Resource.hpp \
   Util\Color\Color.hpp

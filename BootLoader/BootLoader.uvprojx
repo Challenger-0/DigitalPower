@@ -56,7 +56,7 @@
           <DebugInformation>1</DebugInformation>
           <BrowseInformation>1</BrowseInformation>
           <ListingPath>.\Outputs\Listings\</ListingPath>
-          <HexFormatSelection>1</HexFormatSelection>
+          <HexFormatSelection>0</HexFormatSelection>
           <Merge32K>0</Merge32K>
           <CreateBatchFile>0</CreateBatchFile>
           <BeforeCompile>
@@ -120,7 +120,7 @@
         </DllOption>
         <DebugOption>
           <OPTHX>
-            <HexSelection>1</HexSelection>
+            <HexSelection>0</HexSelection>
             <HexRangeLowAddress>0</HexRangeLowAddress>
             <HexRangeHighAddress>0</HexRangeHighAddress>
             <HexOffset>0</HexOffset>
@@ -172,8 +172,8 @@
             <AdsLsun>1</AdsLsun>
             <AdsLven>1</AdsLven>
             <AdsLsxf>1</AdsLsxf>
-            <RvctClst>1</RvctClst>
-            <GenPPlst>1</GenPPlst>
+            <RvctClst>0</RvctClst>
+            <GenPPlst>0</GenPPlst>
             <AdsCpuType>"Cortex-M4"</AdsCpuType>
             <RvctDeviceName></RvctDeviceName>
             <mOS>0</mOS>
@@ -314,7 +314,7 @@
           </ArmAdsMisc>
           <Cads>
             <interw>1</interw>
-            <Optim>4</Optim>
+            <Optim>6</Optim>
             <oTime>0</oTime>
             <SplitLS>0</SplitLS>
             <OneElfS>1</OneElfS>
@@ -340,7 +340,7 @@
               <MiscControls></MiscControls>
               <Define>USE_HAL_DRIVER,USE_FULL_LL_DRIVER</Define>
               <Undefine></Undefine>
-              <IncludePath>.;.\Configs;.\CubeMX\Core\Inc;.\CubeMX\Drivers\CMSIS\Core\Include;.\CubeMX\Drivers\STM32G4xx_HAL_Driver\Inc;.\CubeMX\Drivers\CMSIS\Device\ST\STM32G4xx\Include;.\Components\FreeRTOS\include;.\Components\TinyUSB;.\Components\Graphics</IncludePath>
+              <IncludePath>.;.\Configs;.\CubeMX\Core\Inc;.\CubeMX\Drivers\CMSIS\Core\Include;.\CubeMX\Drivers\STM32G4xx_HAL_Driver\Inc;.\CubeMX\Drivers\CMSIS\Device\ST\STM32G4xx\Include;.\Components\FreeRTOS\include;.\Components\TinyUSB;.\Components\ExGraphics</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -1121,47 +1121,47 @@
           </Files>
         </Group>
         <Group>
-          <GroupName>Components/Graphics</GroupName>
+          <GroupName>Components/ExGraphics</GroupName>
           <Files>
             <File>
               <FileName>Bitmap.cpp</FileName>
               <FileType>8</FileType>
-              <FilePath>.\Components\Graphics\Basic\Bitmap.cpp</FilePath>
+              <FilePath>.\Components\ExGraphics\Basic\Bitmap.cpp</FilePath>
             </File>
             <File>
               <FileName>Focusable.cpp</FileName>
               <FileType>8</FileType>
-              <FilePath>.\Components\Graphics\Basic\Focusable.cpp</FilePath>
+              <FilePath>.\Components\ExGraphics\Basic\Focusable.cpp</FilePath>
             </File>
             <File>
               <FileName>GraphicsFunction.cpp</FileName>
               <FileType>8</FileType>
-              <FilePath>.\Components\Graphics\Basic\GraphicsFunction.cpp</FilePath>
+              <FilePath>.\Components\ExGraphics\Basic\GraphicsFunction.cpp</FilePath>
             </File>
             <File>
               <FileName>GraphicsObject.cpp</FileName>
               <FileType>8</FileType>
-              <FilePath>.\Components\Graphics\Basic\GraphicsObject.cpp</FilePath>
+              <FilePath>.\Components\ExGraphics\Basic\GraphicsObject.cpp</FilePath>
             </File>
             <File>
               <FileName>Offset.cpp</FileName>
               <FileType>8</FileType>
-              <FilePath>.\Components\Graphics\Basic\Offset.cpp</FilePath>
+              <FilePath>.\Components\ExGraphics\Basic\Offset.cpp</FilePath>
             </File>
             <File>
               <FileName>Size.cpp</FileName>
               <FileType>8</FileType>
-              <FilePath>.\Components\Graphics\Basic\Size.cpp</FilePath>
+              <FilePath>.\Components\ExGraphics\Basic\Size.cpp</FilePath>
             </File>
             <File>
               <FileName>Font.cpp</FileName>
               <FileType>8</FileType>
-              <FilePath>.\Components\Graphics\Font\Font.cpp</FilePath>
+              <FilePath>.\Components\ExGraphics\Font\Font.cpp</FilePath>
             </File>
             <File>
               <FileName>Text.cpp</FileName>
               <FileType>8</FileType>
-              <FilePath>.\Components\Graphics\Text\Text.cpp</FilePath>
+              <FilePath>.\Components\ExGraphics\Text\Text.cpp</FilePath>
             </File>
           </Files>
         </Group>

@@ -2,7 +2,7 @@
 
 #include "Basic/GraphicsObject.hpp"
 
-namespace Graphics{
+namespace ExGraphics{
 
 
 class Image : public GraphicsObject{

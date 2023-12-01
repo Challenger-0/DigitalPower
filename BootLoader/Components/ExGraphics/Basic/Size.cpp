@@ -1,6 +1,6 @@
 #include "Size.hpp"
 
-namespace Graphics {
+namespace ExGraphics {
 
 
 std::size_t Size::getArea(void) const {

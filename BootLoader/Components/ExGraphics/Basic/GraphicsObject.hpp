@@ -5,7 +5,7 @@
 #include "Offset.hpp"
 #include "Size.hpp"
 
-namespace Graphics {
+namespace ExGraphics {
 
 class GraphicsObject {
   public:

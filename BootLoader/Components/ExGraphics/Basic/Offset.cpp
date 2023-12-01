@@ -1,6 +1,6 @@
 #include "Offset.hpp"
 
-namespace Graphics {
+namespace ExGraphics {
 
 Offset Offset::operator+(const Offset offset) const {
     return Offset(this->x + offset.x, this->y + offset.y);

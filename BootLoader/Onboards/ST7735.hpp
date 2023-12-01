@@ -5,7 +5,7 @@
 #include "Util/Color/RGB565.hpp"
 #include "stm32g4xx_hal.h"
 
-class ST7735 : public Graphics::GraphicsDevice<RGB565> {
+class ST7735 : public ExGraphics::GraphicsDevice<RGB565> {
   private:
     SPI &spi;
     GPIO_TypeDef *pinDCPort;
@@ -20,5 +20,5 @@ class ST7735 : public Graphics::GraphicsDevice<RGB565> {
     ST7735(SPI &spi, GPIO_TypeDef *pinDCPort, std::uint16_t pinDCPin);
 
     void init(void);
-    void update(Graphics::Offset position, Graphics::Size size, const RGB565 *buffer);
+    void update(ExGraphics::Offset position, ExGraphics::Size size, const RGB565 *buffer);
 };

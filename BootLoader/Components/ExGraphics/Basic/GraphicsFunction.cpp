@@ -1,10 +1,10 @@
 #include "GraphicsFunction.hpp"
 
-Graphics::GraphicsFunction::CirclePart::CirclePart(bool topLeft, bool topRight, bool bottomLeft, bool bottomRight)
+ExGraphics::GraphicsFunction::CirclePart::CirclePart(bool topLeft, bool topRight, bool bottomLeft, bool bottomRight)
     : topLeft(topLeft), topRight(topRight), bottomLeft(bottomLeft), bottomRight(bottomRight) {
 }
 
-void Graphics::GraphicsFunction::drawCircleHelper(Offset offset, Offset point, Color color, std::int16_t radius, CirclePart part) {
+void ExGraphics::GraphicsFunction::drawCircleHelper(Offset offset, Offset point, Color color, std::int16_t radius, CirclePart part) {
     if (part.topRight) {
         drawPixel(offset + point.invertY(), color);
         drawPixel(offset + point.invertX().swapXY(), color);
@@ -23,7 +23,7 @@ void Graphics::GraphicsFunction::drawCircleHelper(Offset offset, Offset point, C
     }
 }
 
-void Graphics::GraphicsFunction::drawCircleFilledHelper(Offset offset, Offset point, Color color, std::int16_t radius, CirclePart part) {
+void ExGraphics::GraphicsFunction::drawCircleFilledHelper(Offset offset, Offset point, Color color, std::int16_t radius, CirclePart part) {
     if (part.topRight) {
         drawVerticalLine(offset + point.invertY(), point.y + 1, color);
         drawVerticalLine(offset + point.invertX().swapXY(), point.x + 1, color);
@@ -42,15 +42,15 @@ void Graphics::GraphicsFunction::drawCircleFilledHelper(Offset offset, Offset po
     }
 }
 
-void Graphics::GraphicsFunction::drawHorizonLine(Offset offset, std::uint16_t width, Color color) {
+void ExGraphics::GraphicsFunction::drawHorizonLine(Offset offset, std::uint16_t width, Color color) {
     drawLine(offset, offset + Offset(width, 0), color);
 }
 
-void Graphics::GraphicsFunction::drawVerticalLine(Offset offset, std::uint16_t height, Color color) {
+void ExGraphics::GraphicsFunction::drawVerticalLine(Offset offset, std::uint16_t height, Color color) {
     drawLine(offset, offset + Offset(0, height), color);
 }
 
-void Graphics::GraphicsFunction::drawLine(Offset start, Offset end, Color color) {
+void ExGraphics::GraphicsFunction::drawLine(Offset start, Offset end, Color color) {
     std::int16_t x1 = start.x, y1 = start.y, x2 = end.x, y2 = end.y;
     std::int16_t tmp;
     std::int16_t x, y;
@@ -108,7 +108,7 @@ void Graphics::GraphicsFunction::drawLine(Offset start, Offset end, Color color)
     }
 }
 
-void Graphics::GraphicsFunction::drawRectFilled(Offset offset, Size size, Color color) {
+void ExGraphics::GraphicsFunction::drawRectFilled(Offset offset, Size size, Color color) {
     Offset end = offset + size.toOffset();
     Offset curr;
     for (curr.y = offset.y; curr.y <= end.y; curr.y++)
@@ -116,14 +116,14 @@ void Graphics::GraphicsFunction::drawRectFilled(Offset offset, Size size, Color 
             drawPixel(curr, color);
 }
 
-void Graphics::GraphicsFunction::drawRect(Offset offset, Size size, Color color) {
+void ExGraphics::GraphicsFunction::drawRect(Offset offset, Size size, Color color) {
     drawLine(offset, offset + Offset(size.width - 1, 0), color);
     drawLine(offset + Offset(0, size.height - 1), offset + Offset(size.width - 1, size.height - 1), color);
     drawLine(offset, offset + Offset(0, size.height - 1), color);
     drawLine(offset + Offset(size.width - 1, 0), offset + Offset(size.width - 1, size.height - 1), color);
 }
 
-void Graphics::GraphicsFunction::drawRRectFilled(Offset offset, Size size, Color color, std::int16_t radius) {
+void ExGraphics::GraphicsFunction::drawRRectFilled(Offset offset, Size size, Color color, std::int16_t radius) {
     int16_t maxRadius = ((size.width < size.height) ? size.width : size.height) / 2;
     radius = radius > maxRadius ? maxRadius : radius < 0 ? 0
                                                          : radius;
@@ -152,7 +152,7 @@ void Graphics::GraphicsFunction::drawRRectFilled(Offset offset, Size size, Color
     }
 }
 
-void Graphics::GraphicsFunction::drawRRect(Offset offset, Size size, Color color, std::int16_t radius) {
+void ExGraphics::GraphicsFunction::drawRRect(Offset offset, Size size, Color color, std::int16_t radius) {
     int16_t maxRadius = ((size.width < size.height) ? size.width : size.height) / 2;
     radius = radius > maxRadius ? maxRadius : radius < 0 ? 0
                                                          : radius;
@@ -186,7 +186,7 @@ void Graphics::GraphicsFunction::drawRRect(Offset offset, Size size, Color color
                CirclePart(false, false, false, true));
 }
 
-void Graphics::GraphicsFunction::drawCircleFilled(Offset offset, Color color, std::uint16_t radius, CirclePart part) {
+void ExGraphics::GraphicsFunction::drawCircleFilled(Offset offset, Color color, std::uint16_t radius, CirclePart part) {
     std::int16_t f = 1 - radius;
     Offset ddF(1, -2 * radius);
     Offset cur(0, radius);
@@ -204,7 +204,7 @@ void Graphics::GraphicsFunction::drawCircleFilled(Offset offset, Color color, st
     }
 }
 
-void Graphics::GraphicsFunction::drawCircle(Offset offset, Color color, std::uint16_t radius, CirclePart part) {
+void ExGraphics::GraphicsFunction::drawCircle(Offset offset, Color color, std::uint16_t radius, CirclePart part) {
     int16_t f = 1 - radius;
     Offset ddF(1, -2 * radius);
     Offset cur(0, radius);
@@ -222,7 +222,7 @@ void Graphics::GraphicsFunction::drawCircle(Offset offset, Color color, std::uin
     }
 }
 
-void Graphics::GraphicsFunction::drawMonoBitmap(Offset offset, const Bitmap &_bitmap, Color color) {
+void ExGraphics::GraphicsFunction::drawMonoBitmap(Offset offset, const Bitmap &_bitmap, Color color) {
     ActivatedBitmap bitmap = _bitmap.activate();
     for (Offset cur = Offset(0, 0); cur.y < bitmap.size.height; cur.y++)
         for (cur.x = 0; cur.x < bitmap.size.width; cur.x++)

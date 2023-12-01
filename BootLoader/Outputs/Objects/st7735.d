@@ -63,11 +63,11 @@
   Util\MutliThread\MutexLock.hpp Components\FreeRTOS\include\semphr.h \
   Components\FreeRTOS\include\queue.h Components\FreeRTOS\include\task.h \
   Components\FreeRTOS\include\list.h \
-  Components\Graphics\GraphicsDevice.hpp \
-  Components\Graphics\Basic\Offset.hpp \
-  Components\Graphics\Basic\Size.hpp \
+  Components\ExGraphics\GraphicsDevice.hpp \
+  Components\ExGraphics\Basic\Offset.hpp \
+  Components\ExGraphics\Basic\Size.hpp \
   C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\libcxx\cstdlib \
   C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\libcxx\stdlib.h \
   C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdlib.h \
-  Components\Graphics\Basic\Offset.ipp Util\Color\RGB565.hpp \
+  Components\ExGraphics\Basic\Offset.ipp Util\Color\RGB565.hpp \
   Util\Color\Color.hpp

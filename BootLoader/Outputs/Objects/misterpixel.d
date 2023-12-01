@@ -1,8 +1,8 @@
 ./outputs/objects/misterpixel.o: Resource\Fonts\MisterPixel.cpp \
-  Resource\Fonts\MisterPixel.hpp Components\Graphics\Font\Font.hpp \
-  Components\Graphics\Basic\Bitmap.hpp \
-  Components\Graphics\Basic\Offset.hpp \
-  Components\Graphics\Basic\Size.hpp \
+  Resource\Fonts\MisterPixel.hpp Components\ExGraphics\Font\Font.hpp \
+  Components\ExGraphics\Basic\Bitmap.hpp \
+  Components\ExGraphics\Basic\Offset.hpp \
+  Components\ExGraphics\Basic\Size.hpp \
   C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\libcxx\cstddef \
   C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\libcxx\__assert \
   C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\libcxx\__config \
@@ -23,5 +23,5 @@
   C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\libcxx\cstdlib \
   C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\libcxx\stdlib.h \
   C:\Keil_v5\ARM\ARMCLANG\Bin\..\include\stdlib.h \
-  Components\Graphics\Basic\Offset.ipp Resource\Resource.hpp \
+  Components\ExGraphics\Basic\Offset.ipp Resource\Resource.hpp \
   Resource\LocalResource.hpp

@@ -1,6 +1,6 @@
 #include "Focusable.hpp"
 
-namespace Graphics {
+namespace ExGraphics {
 
 Focusable::Focusable(std::uint16_t focusIndex)
     : index(focusIndex) {

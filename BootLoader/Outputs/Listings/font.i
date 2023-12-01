@@ -960,9 +960,9 @@ const FontCharacter *FontCharacterSet::find(std::uint32_t target) const {
     do {
         mid = (end - start) / 2;
         curr = &characters[mid];
-        if (curr->charater > target)
+        if (curr->charater < target)
             end = mid - 1;
-        else if (curr->charater < target)
+        else if (curr->charater > target)
             start = mid + 1;
         else
             return curr;

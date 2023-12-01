@@ -1,7 +1,7 @@
 #include "Basic/GraphicsObject.hpp"
 #include "Font/Font.hpp"
 
-namespace Graphics {
+namespace ExGraphics {
 
 class Text : public GraphicsObject {
   protected:

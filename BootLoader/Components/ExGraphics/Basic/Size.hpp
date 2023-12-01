@@ -5,7 +5,7 @@
 
 #include "Offset.hpp"
 
-namespace Graphics {
+namespace ExGraphics {
 
 class Offset;
 
