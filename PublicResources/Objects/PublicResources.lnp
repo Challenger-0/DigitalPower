@@ -1,8 +1,0 @@
---cpu=Cortex-M4.fp.sp
-".\objects\localresource.o"
-".\objects\resource.o"
-".\objects\misterpixel.o"
---strict --scatter ".\Objects\PublicResources.sct"
---summary_stderr --info summarysizes --map --load_addr_map_info --xref --callgraph --symbols
---info sizes --info totals --info unused --info veneers
---list ".\Listings\PublicResources.map" -o .\Objects\PublicResources.axf

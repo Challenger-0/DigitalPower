@@ -1,55 +1,0 @@
-Dependencies for Project 'PublicResources', Target 'PublicResources': (DO NOT MODIFY !)
-CompilerVersion: 6190000::V6.19::ARMCLANG
-F (.\Resource\LocalResource.cpp)(0x6565EF8E)(-xc++ -std=c++11 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar -fno-exceptions-gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I .-IC:/Users/CHALLENGER/AppData/Local/Arm/Packs/Keil/STM32G4xx_DFP/1.5.0/Drivers/CMSIS/Device/ST/STM32G4xx/Include-D__UVISION_VERSION="538" -DSTM32G431xx-o ./objects/localresource.o -MD)
-I (Resource\LocalResource.hpp)(0x6565EF8E)
-I (Resource\Resource.hpp)(0x6562024E)
-I (C:\Keil_v5\ARM\ARMCLANG\include\libcxx\cstddef)(0x63884906)
-I (C:\Keil_v5\ARM\ARMCLANG\include\libcxx\__assert)(0x63884902)
-I (C:\Keil_v5\ARM\ARMCLANG\include\libcxx\__config)(0x63884902)
-I (C:\Keil_v5\ARM\ARMCLANG\include\libcxx\__verbose_abort)(0x63884906)
-I (C:\Keil_v5\ARM\ARMCLANG\include\libcxx\__availability)(0x63884902)
-I (C:\Keil_v5\ARM\ARMCLANG\include\libcxx\__type_traits\enable_if.h)(0x63884906)
-I (C:\Keil_v5\ARM\ARMCLANG\include\libcxx\__type_traits\integral_constant.h)(0x63884906)
-I (C:\Keil_v5\ARM\ARMCLANG\include\libcxx\__type_traits\is_integral.h)(0x63884906)
-I (C:\Keil_v5\ARM\ARMCLANG\include\libcxx\__type_traits\remove_cv.h)(0x63884906)
-I (C:\Keil_v5\ARM\ARMCLANG\include\libcxx\__type_traits\remove_const.h)(0x63884906)
-I (C:\Keil_v5\ARM\ARMCLANG\include\libcxx\__type_traits\remove_volatile.h)(0x63884906)
-I (C:\Keil_v5\ARM\ARMCLANG\include\libcxx\version)(0x63884908)
-I (C:\Keil_v5\ARM\ARMCLANG\include\libcxx\stddef.h)(0x63884908)
-I (C:\Keil_v5\ARM\ARMCLANG\include\stddef.h)(0x63884908)
-F (.\Resource\Resource.cpp)(0x6562024E)(-xc++ -std=c++11 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar -fno-exceptions-gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I .-IC:/Users/CHALLENGER/AppData/Local/Arm/Packs/Keil/STM32G4xx_DFP/1.5.0/Drivers/CMSIS/Device/ST/STM32G4xx/Include-D__UVISION_VERSION="538" -DSTM32G431xx-o ./objects/resource.o -MD)
-I (Resource\Resource.hpp)(0x6562024E)
-I (C:\Keil_v5\ARM\ARMCLANG\include\libcxx\cstddef)(0x63884906)
-I (C:\Keil_v5\ARM\ARMCLANG\include\libcxx\__assert)(0x63884902)
-I (C:\Keil_v5\ARM\ARMCLANG\include\libcxx\__config)(0x63884902)
-I (C:\Keil_v5\ARM\ARMCLANG\include\libcxx\__verbose_abort)(0x63884906)
-I (C:\Keil_v5\ARM\ARMCLANG\include\libcxx\__availability)(0x63884902)
-I (C:\Keil_v5\ARM\ARMCLANG\include\libcxx\__type_traits\enable_if.h)(0x63884906)
-I (C:\Keil_v5\ARM\ARMCLANG\include\libcxx\__type_traits\integral_constant.h)(0x63884906)
-I (C:\Keil_v5\ARM\ARMCLANG\include\libcxx\__type_traits\is_integral.h)(0x63884906)
-I (C:\Keil_v5\ARM\ARMCLANG\include\libcxx\__type_traits\remove_cv.h)(0x63884906)
-I (C:\Keil_v5\ARM\ARMCLANG\include\libcxx\__type_traits\remove_const.h)(0x63884906)
-I (C:\Keil_v5\ARM\ARMCLANG\include\libcxx\__type_traits\remove_volatile.h)(0x63884906)
-I (C:\Keil_v5\ARM\ARMCLANG\include\libcxx\version)(0x63884908)
-I (C:\Keil_v5\ARM\ARMCLANG\include\libcxx\stddef.h)(0x63884908)
-I (C:\Keil_v5\ARM\ARMCLANG\include\stddef.h)(0x63884908)
-F (.\Resource\Fonts\MisterPixel.cpp)(0x6565F24B)(-xc++ -std=c++11 --target=arm-arm-none-eabi -mcpu=cortex-m4 -mfpu=fpv4-sp-d16 -mfloat-abi=hard -c-fno-rtti -funsigned-char -fshort-enums -fshort-wchar -fno-exceptions-gdwarf-4 -O0 -ffunction-sections -Wno-packed -Wno-missing-variable-declarations -Wno-missing-prototypes -Wno-missing-noreturn -Wno-sign-conversion -Wno-nonportable-include-path -Wno-reserved-id-macro -Wno-unused-macros -Wno-documentation-unknown-command -Wno-documentation -Wno-license-management -Wno-parentheses-equality -Wno-reserved-identifier -I .-IC:/Users/CHALLENGER/AppData/Local/Arm/Packs/Keil/STM32G4xx_DFP/1.5.0/Drivers/CMSIS/Device/ST/STM32G4xx/Include-D__UVISION_VERSION="538" -DSTM32G431xx-o ./objects/misterpixel.o -MD)
-I (Resource\LocalResource.hpp)(0x6565EF8E)
-I (Resource\Resource.hpp)(0x6562024E)
-I (C:\Keil_v5\ARM\ARMCLANG\include\libcxx\cstddef)(0x63884906)
-I (C:\Keil_v5\ARM\ARMCLANG\include\libcxx\__assert)(0x63884902)
-I (C:\Keil_v5\ARM\ARMCLANG\include\libcxx\__config)(0x63884902)
-I (C:\Keil_v5\ARM\ARMCLANG\include\libcxx\__verbose_abort)(0x63884906)
-I (C:\Keil_v5\ARM\ARMCLANG\include\libcxx\__availability)(0x63884902)
-I (C:\Keil_v5\ARM\ARMCLANG\include\libcxx\__type_traits\enable_if.h)(0x63884906)
-I (C:\Keil_v5\ARM\ARMCLANG\include\libcxx\__type_traits\integral_constant.h)(0x63884906)
-I (C:\Keil_v5\ARM\ARMCLANG\include\libcxx\__type_traits\is_integral.h)(0x63884906)
-I (C:\Keil_v5\ARM\ARMCLANG\include\libcxx\__type_traits\remove_cv.h)(0x63884906)
-I (C:\Keil_v5\ARM\ARMCLANG\include\libcxx\__type_traits\remove_const.h)(0x63884906)
-I (C:\Keil_v5\ARM\ARMCLANG\include\libcxx\__type_traits\remove_volatile.h)(0x63884906)
-I (C:\Keil_v5\ARM\ARMCLANG\include\libcxx\version)(0x63884908)
-I (C:\Keil_v5\ARM\ARMCLANG\include\libcxx\stddef.h)(0x63884908)
-I (C:\Keil_v5\ARM\ARMCLANG\include\stddef.h)(0x63884908)
-I (C:\Keil_v5\ARM\ARMCLANG\include\libcxx\cstdint)(0x63884906)
-I (C:\Keil_v5\ARM\ARMCLANG\include\libcxx\stdint.h)(0x63884908)
-I (C:\Keil_v5\ARM\ARMCLANG\include\stdint.h)(0x648B1B28)
