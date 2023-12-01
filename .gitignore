@@ -1,4 +1,6 @@
-/Outputs
-/.vscode
-/DebugConfig
-/BootLoader.uvguix.*
+BootLoader/Outputs/*
+*/.vscode
+BootLoader/DebugConfig
+BootLoader/BootLoader.uvguix.*
+*/CubeMX/Drivers/*
+*/CubeMX/Middlewares/*
