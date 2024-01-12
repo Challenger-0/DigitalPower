@@ -1,7 +1,7 @@
 #pragma once
 
 #include "BSP/SPI.hpp"
-#include "GraphicsDevice.hpp"
+#include "ExGraphics.hpp"
 #include "Util/Color/RGB565.hpp"
 #include "stm32g4xx_hal.h"
 

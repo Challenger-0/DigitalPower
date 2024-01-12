@@ -22,6 +22,7 @@
 #include "stm32g4xx_it.h"
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
+#include "core_cm4.h"
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -93,6 +94,7 @@ void HardFault_Handler(void)
   /* USER CODE BEGIN HardFault_IRQn 0 */
 //    extern void  BootLoader_HardfaultHandler(void);
 //    BootLoader_HardfaultHandler();
+    __ASM("BKPT 0x00");
   /* USER CODE END HardFault_IRQn 0 */
   while (1)
   {

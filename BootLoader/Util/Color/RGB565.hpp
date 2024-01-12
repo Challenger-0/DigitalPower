@@ -1,9 +1,15 @@
 #pragma once
 
+#include "ExGraphics.hpp"
 #include <cstdint>
-#include "Color.hpp"
 
-struct RGB565{
+struct RGB565 {
+  protected:
+    std::uint8_t rawR(void) const;
+    std::uint8_t rawG(void) const;
+    std::uint8_t rawB(void) const;
+
+  public:
     std::uint16_t val;
     void R(uint8_t r);
     void G(uint8_t g);
@@ -12,9 +18,18 @@ struct RGB565{
     void HSV(float h, float s, float v);
     void HSL(float h, float s, float l);
 
-    RGB565(uint8_t r, uint8_t g, uint8_t b);
-    RGB565(uint16_t val);
-    RGB565(Color &color);
+    constexpr RGB565(uint8_t r, uint8_t g, uint8_t b) 
+        : val(((std::uint16_t)(r & 0xF8) << 8)|((std::uint16_t)(g & 0xFC) << 3)|(b >> 3)) {}
+    constexpr RGB565(uint16_t val) : val(val){};
+        constexpr RGB565(ExGraphics::Color &color) : RGB565(color.r, color.g, color.b){};
     RGB565(void) = default;
 
+    /**
+     * @brief 混色方法
+     *
+     * @param extra 待混合的颜色
+     * @param extraRatio 待混合的颜色的占比 0~255
+     * @return RGB565
+     */
+    RGB565 mix(RGB565 extra, std::uint8_t extraRatio) const;
 };

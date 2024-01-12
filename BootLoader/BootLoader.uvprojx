@@ -314,7 +314,7 @@
           </ArmAdsMisc>
           <Cads>
             <interw>1</interw>
-            <Optim>6</Optim>
+            <Optim>1</Optim>
             <oTime>0</oTime>
             <SplitLS>0</SplitLS>
             <OneElfS>1</OneElfS>
@@ -338,9 +338,9 @@
             <v6Rtti>0</v6Rtti>
             <VariousControls>
               <MiscControls></MiscControls>
-              <Define>USE_HAL_DRIVER,USE_FULL_LL_DRIVER</Define>
+              <Define>USE_HAL_DRIVER,USE_FULL_LL_DRIVER,NDEBUG</Define>
               <Undefine></Undefine>
-              <IncludePath>.;.\Configs;.\CubeMX\Core\Inc;.\CubeMX\Drivers\CMSIS\Core\Include;.\CubeMX\Drivers\STM32G4xx_HAL_Driver\Inc;.\CubeMX\Drivers\CMSIS\Device\ST\STM32G4xx\Include;.\Components\FreeRTOS\include;.\Components\TinyUSB;.\Components\ExGraphics</IncludePath>
+              <IncludePath>.;.\Configs;.\CubeMX\Core\Inc;.\CubeMX\Drivers\CMSIS\Core\Include;.\CubeMX\Drivers\STM32G4xx_HAL_Driver\Inc;.\CubeMX\Drivers\CMSIS\Device\ST\STM32G4xx\Include;.\Components\FreeRTOS\include;.\Components\TinyUSB;.\Components\ExGraphics;.\Components\ExFixedPoint</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -877,6 +877,75 @@
         </Group>
         <Group>
           <GroupName>CubeMX/Core</GroupName>
+          <GroupOption>
+            <CommonProperty>
+              <UseCPPCompiler>0</UseCPPCompiler>
+              <RVCTCodeConst>0</RVCTCodeConst>
+              <RVCTZI>0</RVCTZI>
+              <RVCTOtherData>0</RVCTOtherData>
+              <ModuleSelection>0</ModuleSelection>
+              <IncludeInBuild>2</IncludeInBuild>
+              <AlwaysBuild>2</AlwaysBuild>
+              <GenerateAssemblyFile>2</GenerateAssemblyFile>
+              <AssembleAssemblyFile>2</AssembleAssemblyFile>
+              <PublicsOnly>2</PublicsOnly>
+              <StopOnExitCode>11</StopOnExitCode>
+              <CustomArgument></CustomArgument>
+              <IncludeLibraryModules></IncludeLibraryModules>
+              <ComprImg>1</ComprImg>
+            </CommonProperty>
+            <GroupArmAds>
+              <Cads>
+                <interw>2</interw>
+                <Optim>4</Optim>
+                <oTime>2</oTime>
+                <SplitLS>2</SplitLS>
+                <OneElfS>2</OneElfS>
+                <Strict>2</Strict>
+                <EnumInt>2</EnumInt>
+                <PlainCh>2</PlainCh>
+                <Ropi>2</Ropi>
+                <Rwpi>2</Rwpi>
+                <wLevel>0</wLevel>
+                <uThumb>2</uThumb>
+                <uSurpInc>2</uSurpInc>
+                <uC99>2</uC99>
+                <uGnu>2</uGnu>
+                <useXO>2</useXO>
+                <v6Lang>0</v6Lang>
+                <v6LangP>0</v6LangP>
+                <vShortEn>2</vShortEn>
+                <vShortWch>2</vShortWch>
+                <v6Lto>1</v6Lto>
+                <v6WtE>2</v6WtE>
+                <v6Rtti>2</v6Rtti>
+                <VariousControls>
+                  <MiscControls></MiscControls>
+                  <Define></Define>
+                  <Undefine></Undefine>
+                  <IncludePath></IncludePath>
+                </VariousControls>
+              </Cads>
+              <Aads>
+                <interw>2</interw>
+                <Ropi>2</Ropi>
+                <Rwpi>2</Rwpi>
+                <thumb>2</thumb>
+                <SplitLS>2</SplitLS>
+                <SwStkChk>2</SwStkChk>
+                <NoWarn>2</NoWarn>
+                <uSurpInc>2</uSurpInc>
+                <useXO>2</useXO>
+                <ClangAsOpt>0</ClangAsOpt>
+                <VariousControls>
+                  <MiscControls></MiscControls>
+                  <Define></Define>
+                  <Undefine></Undefine>
+                  <IncludePath></IncludePath>
+                </VariousControls>
+              </Aads>
+            </GroupArmAds>
+          </GroupOption>
           <Files>
             <File>
               <FileName>dma.c</FileName>
@@ -1038,21 +1107,11 @@
               <FileType>8</FileType>
               <FilePath>.\Util\CallbackFunction.cpp</FilePath>
             </File>
-            <File>
-              <FileName>UTF8Praser.cpp</FileName>
-              <FileType>8</FileType>
-              <FilePath>.\Util\UTF8Praser.cpp</FilePath>
-            </File>
           </Files>
         </Group>
         <Group>
           <GroupName>Util/Color</GroupName>
           <Files>
-            <File>
-              <FileName>Color.cpp</FileName>
-              <FileType>8</FileType>
-              <FilePath>.\Util\Color\Color.cpp</FilePath>
-            </File>
             <File>
               <FileName>RGB565.cpp</FileName>
               <FileType>8</FileType>
@@ -1072,6 +1131,75 @@
         </Group>
         <Group>
           <GroupName>Components/FreeRTOS</GroupName>
+          <GroupOption>
+            <CommonProperty>
+              <UseCPPCompiler>0</UseCPPCompiler>
+              <RVCTCodeConst>0</RVCTCodeConst>
+              <RVCTZI>0</RVCTZI>
+              <RVCTOtherData>0</RVCTOtherData>
+              <ModuleSelection>0</ModuleSelection>
+              <IncludeInBuild>2</IncludeInBuild>
+              <AlwaysBuild>2</AlwaysBuild>
+              <GenerateAssemblyFile>2</GenerateAssemblyFile>
+              <AssembleAssemblyFile>2</AssembleAssemblyFile>
+              <PublicsOnly>2</PublicsOnly>
+              <StopOnExitCode>11</StopOnExitCode>
+              <CustomArgument></CustomArgument>
+              <IncludeLibraryModules></IncludeLibraryModules>
+              <ComprImg>1</ComprImg>
+            </CommonProperty>
+            <GroupArmAds>
+              <Cads>
+                <interw>2</interw>
+                <Optim>4</Optim>
+                <oTime>2</oTime>
+                <SplitLS>2</SplitLS>
+                <OneElfS>2</OneElfS>
+                <Strict>2</Strict>
+                <EnumInt>2</EnumInt>
+                <PlainCh>2</PlainCh>
+                <Ropi>2</Ropi>
+                <Rwpi>2</Rwpi>
+                <wLevel>0</wLevel>
+                <uThumb>2</uThumb>
+                <uSurpInc>2</uSurpInc>
+                <uC99>2</uC99>
+                <uGnu>2</uGnu>
+                <useXO>2</useXO>
+                <v6Lang>0</v6Lang>
+                <v6LangP>0</v6LangP>
+                <vShortEn>2</vShortEn>
+                <vShortWch>2</vShortWch>
+                <v6Lto>1</v6Lto>
+                <v6WtE>2</v6WtE>
+                <v6Rtti>2</v6Rtti>
+                <VariousControls>
+                  <MiscControls></MiscControls>
+                  <Define></Define>
+                  <Undefine></Undefine>
+                  <IncludePath></IncludePath>
+                </VariousControls>
+              </Cads>
+              <Aads>
+                <interw>2</interw>
+                <Ropi>2</Ropi>
+                <Rwpi>2</Rwpi>
+                <thumb>2</thumb>
+                <SplitLS>2</SplitLS>
+                <SwStkChk>2</SwStkChk>
+                <NoWarn>2</NoWarn>
+                <uSurpInc>2</uSurpInc>
+                <useXO>2</useXO>
+                <ClangAsOpt>0</ClangAsOpt>
+                <VariousControls>
+                  <MiscControls></MiscControls>
+                  <Define></Define>
+                  <Undefine></Undefine>
+                  <IncludePath></IncludePath>
+                </VariousControls>
+              </Aads>
+            </GroupArmAds>
+          </GroupOption>
           <Files>
             <File>
               <FileName>croutine.c</FileName>
@@ -1121,51 +1249,6 @@
           </Files>
         </Group>
         <Group>
-          <GroupName>Components/ExGraphics</GroupName>
-          <Files>
-            <File>
-              <FileName>Bitmap.cpp</FileName>
-              <FileType>8</FileType>
-              <FilePath>.\Components\ExGraphics\Basic\Bitmap.cpp</FilePath>
-            </File>
-            <File>
-              <FileName>Focusable.cpp</FileName>
-              <FileType>8</FileType>
-              <FilePath>.\Components\ExGraphics\Basic\Focusable.cpp</FilePath>
-            </File>
-            <File>
-              <FileName>GraphicsFunction.cpp</FileName>
-              <FileType>8</FileType>
-              <FilePath>.\Components\ExGraphics\Basic\GraphicsFunction.cpp</FilePath>
-            </File>
-            <File>
-              <FileName>GraphicsObject.cpp</FileName>
-              <FileType>8</FileType>
-              <FilePath>.\Components\ExGraphics\Basic\GraphicsObject.cpp</FilePath>
-            </File>
-            <File>
-              <FileName>Offset.cpp</FileName>
-              <FileType>8</FileType>
-              <FilePath>.\Components\ExGraphics\Basic\Offset.cpp</FilePath>
-            </File>
-            <File>
-              <FileName>Size.cpp</FileName>
-              <FileType>8</FileType>
-              <FilePath>.\Components\ExGraphics\Basic\Size.cpp</FilePath>
-            </File>
-            <File>
-              <FileName>Font.cpp</FileName>
-              <FileType>8</FileType>
-              <FilePath>.\Components\ExGraphics\Font\Font.cpp</FilePath>
-            </File>
-            <File>
-              <FileName>Text.cpp</FileName>
-              <FileType>8</FileType>
-              <FilePath>.\Components\ExGraphics\Text\Text.cpp</FilePath>
-            </File>
-          </Files>
-        </Group>
-        <Group>
           <GroupName>Resource</GroupName>
           <Files>
             <File>
@@ -1184,9 +1267,74 @@
           <GroupName>Resource/Fonts</GroupName>
           <Files>
             <File>
-              <FileName>MisterPixel.cpp</FileName>
+              <FileName>font_hua_wen_zhong_song_16px_w500_gs2bit.cpp</FileName>
               <FileType>8</FileType>
-              <FilePath>.\Resource\Fonts\MisterPixel.cpp</FilePath>
+              <FilePath>.\Resource\Fonts\font_hua_wen_zhong_song_16px_w500_gs2bit.cpp</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>Components/ExGraphics/Basic</GroupName>
+          <Files>
+            <File>
+              <FileName>ClipWindowHolder.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>.\Components\ExGraphics\Basic\Drawing\ClipWindowHolder.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>DrawingFunction.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>.\Components\ExGraphics\Basic\Drawing\DrawingFunction.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>Bitmap.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>.\Components\ExGraphics\Basic\Public\Bitmap.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>Font.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>.\Components\ExGraphics\Basic\Public\Font.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>Offset.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>.\Components\ExGraphics\Basic\Public\Offset.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>Size.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>.\Components\ExGraphics\Basic\Public\Size.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>GraphicsObject.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>.\Components\ExGraphics\Basic\UI\GraphicsObject.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>UIFunction.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>.\Components\ExGraphics\Basic\UI\UIFunction.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>UTF8Parser.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>.\Components\ExGraphics\Basic\Public\UTF8Parser.cpp</FilePath>
+            </File>
+            <File>
+              <FileName>Mathematical.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>.\Components\ExGraphics\Basic\Public\Mathematical.cpp</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>Components/ExGraphics/Widgets</GroupName>
+          <Files>
+            <File>
+              <FileName>Label.cpp</FileName>
+              <FileType>8</FileType>
+              <FilePath>.\Components\ExGraphics\Widgets\Label\Label.cpp</FilePath>
             </File>
           </Files>
         </Group>

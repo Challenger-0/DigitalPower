@@ -1,5 +1,6 @@
 #include "RGB565.hpp"
 #include <cmath>
+#include <numeric>
 
 void RGB565::R(uint8_t r) {
     val &= ~0xF800;
@@ -16,11 +17,6 @@ void RGB565::B(uint8_t b) {
     val |= b >> 3;
 }
 
-void RGB565::RGB(uint8_t r, uint8_t g, uint8_t b) {
-    R(r);
-    G(g);
-    B(b);
-}
 
 void RGB565::HSV(float h, float s, float v) {
     float f, a, d, c;
@@ -119,14 +115,24 @@ void RGB565::HSL(float h, float s, float l) {
     B((bp + m) * 255);
 }
 
-RGB565::RGB565(uint8_t r, uint8_t g, uint8_t b) {
-    RGB(r, g, b);
+
+
+RGB565 RGB565::mix(RGB565 extra, std::uint8_t extraRatio) const {
+    std::uint8_t baseRatio = std::numeric_limits<std::uint8_t>::max() - extraRatio;
+    std::uint16_t mixedRawR = (std::uint16_t)rawR() * baseRatio / std::numeric_limits<std::uint8_t>::max() + (std::uint16_t)extra.rawR() * extraRatio / std::numeric_limits<std::uint8_t>::max();
+    std::uint16_t mixedRawG = (std::uint16_t)rawG() * baseRatio / std::numeric_limits<std::uint8_t>::max() + (std::uint16_t)extra.rawG() * extraRatio / std::numeric_limits<std::uint8_t>::max();
+    std::uint16_t mixedRawB = (std::uint16_t)rawB() * baseRatio / std::numeric_limits<std::uint8_t>::max() + (std::uint16_t)extra.rawB() * extraRatio / std::numeric_limits<std::uint8_t>::max();
+    return RGB565(mixedRawR << 11 | mixedRawG << 5 | mixedRawB << 0);
 }
 
-RGB565::RGB565(uint16_t val)
-    : val(val) {
+std::uint8_t RGB565::rawR(void) const {
+    return (std::uint8_t)((val & 0xF800) >> 11);
 }
 
-RGB565::RGB565(Color &color)
-    : RGB565(color.r, color.g, color.b) {
+std::uint8_t RGB565::rawG(void) const {
+    return (std::uint8_t)((val & 0x07E0) >> 5);
+}
+
+std::uint8_t RGB565::rawB(void) const {
+    return (std::uint8_t)((val & 0x001F) >> 0);
 }
